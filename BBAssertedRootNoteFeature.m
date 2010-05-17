@@ -33,8 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	NSString* target_label = [sequence labelAtTime:t];
 	
 	@try {
-		NSString* noteName = BBMusicAnalysisNotesAttributeNames[BBChordNameToPitchClass(target_label)];
-		return [[sequence valueOfAttributeAtTime: t named:noteName] isEqualToString:@"YES"]; 
+		return BBMusicAnalysisPitchIsPresent( sequence, t, BBChordNameToPitchClass(target_label));
 	} @catch (NSException* exception) {
 		return NO;
 	}

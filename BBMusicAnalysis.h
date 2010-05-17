@@ -57,3 +57,4 @@ NSString* BBChordNameToAddedNote(NSString* chordName);
 unsigned int BBNumberOfChordNotesAssertedInEvent(NSString* target_label, BBSequence* sequence, unsigned int t);
 
 BOOL BBAreChordsParallelTones(NSString* chord1, NSString* chord2);
+BOOL BBMusicAnalysisPitchIsPresent(BBSequence*, unsigned int, unsigned int p);
