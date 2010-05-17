@@ -10,3 +10,4 @@ unsigned int BBNumberOfChordNotesAssertedInEventWP(NSString* target_label, BBSeq
 
 BOOL BBAreChordsParallelTonesWP(NSString* chord1, NSString* chord2);
 BOOL BBMusicAnalysisPitchIsPresentWP(BBSequence* sequence, unsigned int t, unsigned int pitch);
+NSString* BBMusicAnalysisValueForAttributeAtTimeWP(BBSequence* sequence, unsigned int t, NSString* attributeName);

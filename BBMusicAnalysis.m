@@ -33,3 +33,9 @@ BOOL BBMusicAnalysisPitchIsPresent(BBSequence* sequence, unsigned int t, unsigne
 	return BBMusicAnalysisPitchIsPresentWP( sequence, t, pitch );
 }
 
+NSString* BBMusicAnalysisValueForAttributeAtTime(BBSequence* sequence, unsigned int t, NSString* attributeName) {
+	return BBMusicAnalysisValueForAttributeAtTimeWP(sequence, t, attributeName);
+}
+
+
+

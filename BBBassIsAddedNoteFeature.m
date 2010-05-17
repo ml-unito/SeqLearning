@@ -22,8 +22,9 @@
 	
 	unsigned int added_note_pitch = BBAddedNoteToPitchClass(BBChordNameToPitchClass(target_label), 
 															added_note);
-	
-	NSString* bass_note = [sequence valueOfAttributeAtTime:t named:BBMusicAnalysisBassAttributeName];
+
+	//	[sequence valueOfAttributeAtTime:t named:BBMusicAnalysisBassAttributeName];
+	NSString* bass_note = BBMusicAnalysisValueForAttributeAtTime(sequence, t, BBMusicAnalysisBassAttributeName);
 	
 	return BBNoteNameToPitchClass(bass_note) == added_note_pitch;
 }

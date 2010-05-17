@@ -232,10 +232,13 @@ BOOL BBAreChordsParallelTonesWP(NSString* chord1, NSString* chord2) {
 
 BOOL BBMusicAnalysisPitchIsPresentWP(BBSequence* sequence, unsigned int t, unsigned int pitch) {
 	NSString* noteName = BBMusicAnalysisNotesAttributeNames[pitch];
-	return [[sequence valueOfAttributeAtTime: t named:noteName] isEqualToSt1ring:@"YES"]; 
+	return [[sequence valueOfAttributeAtTime: t named:noteName] isEqualToString:@"YES"]; 
 //
 //	
 //	return BBMusicAnalysisPitchIsPresentWP( s, p );
 }
 
+NSString* BBMusicAnalysisValueForAttributeAtTimeWP(BBSequence* sequence, unsigned int t, NSString* attributeName) {
+	return [sequence valueOfAttributeAtTime:t named:attributeName];	
+}
 
