@@ -16,8 +16,9 @@
 	NSString* target_label = [sequence labelAtTime:t];
 	unsigned int root_pitch = BBChordNameToPitchClass(target_label);
 	
-	NSString* bass_note = [sequence valueOfAttributeAtTime:t named:BBMusicAnalysisBassAttributeName];
-		
+	//NSString* bass_note = [sequence valueOfAttributeAtTime:t named:BBMusicAnalysisBassAttributeName];
+	NSString* bass_note = BBMusicAnalysisValueForAttributeAtTime(sequence, t, BBMusicAnalysisBassAttributeName);
+	
 	return root_pitch == BBNoteNameToPitchClass(bass_note);
 }
 

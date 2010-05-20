@@ -42,6 +42,21 @@ NSString* BBChordChangeOnMetricalPatternFeatureKeyPattern = @"Pattern";
 
 	char metric_pattern[4] = "000";
 	
+	 /*
+	 if ([parseInt(BBMusicAnalysisValueForAttributeAtTime(sequence, t-1, 
+	 BBMusicAnalysisMetricRelevanceAttributeName)) intValue] >= 3){
+	 metric_pattern[0] = '1';
+	 }
+	 if ([[parseInt(BBMusicAnalysisValueForAttributeAtTime(sequence, t, 
+	 BBMusicAnalysisMetricRelevanceAttributeName)) intValue] >= 3){
+	 metric_pattern[1] = '1';
+	 }
+	 if ([[parseInt(BBMusicAnalysisValueForAttributeAtTime(sequence, t+1, 
+	 BBMusicAnalysisMetricRelevanceAttributeName)) intValue] >= 3){
+	 metric_pattern[2] = '1';
+	 }
+	 */
+	
 	if ([[sequence valueOfAttributeAtTime:t-1 
 									named:BBMusicAnalysisMetricRelevanceAttributeName] intValue] >= 3){
 		metric_pattern[0] = '1';

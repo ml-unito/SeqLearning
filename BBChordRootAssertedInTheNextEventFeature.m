@@ -38,6 +38,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	
 	// If the root note is already stated in the current chord, we are not interested in investigating
 	// following chord.
+	
 	if([[sequence valueOfAttributeAtTime: t named:rootNoteName] isEqualToString:@"YES"])
 		return NO;
 	

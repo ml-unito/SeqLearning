@@ -36,6 +36,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	int rootPitchClass = BBChordNameToPitchClass( label );
 
 	NSString* noteName = BBMusicAnalysisNotesAttributeNames[(rootPitchClass+10)%12];
+	//da modificare in base al arff
+	
 	if([[sequence valueOfAttributeAtTime: t named:noteName] isEqual:@"YES"]) {
 		if( [addedNote isEqualToString:@"7"] )
 			return YES;
