@@ -35,26 +35,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	
 	int rootPitchClass = BBChordNameToPitchClass( label );
 
-	NSString* noteName = BBMusicAnalysisNotesAttributeNames[(rootPitchClass+10)%12];
-	//da modificare in base al arff
-	
-	if([[sequence valueOfAttributeAtTime: t named:noteName] isEqual:@"YES"]) {
+	// NSString* noteName = BBMusicAnalysisNotesAttributeNames[(rootPitchClass+10)%12];	
+	int notePitch = (rootPitchClass+10)%12;
+	if(BBMusicAnalysisPitchIsPresent(sequence, t, notePitch)) {
 		if( [addedNote isEqualToString:@"7"] )
 			return YES;
 		foundAddedNoteInData = TRUE;
 	}
-	
-	noteName = BBMusicAnalysisNotesAttributeNames[(rootPitchClass+9)%12];
-	if([[sequence valueOfAttributeAtTime: t named:noteName] isEqual:@"YES"]) {
+
+	notePitch = (rootPitchClass+9)%12;
+	if(BBMusicAnalysisPitchIsPresent(sequence, t, notePitch)) {
 		if( [addedNote isEqualToString:@"6"] )
 			return YES;
 		foundAddedNoteInData = TRUE;
 	}
 
-	noteName = BBMusicAnalysisNotesAttributeNames[(rootPitchClass+5)%12];
-	NSString* relatedNoteName = BBMusicAnalysisNotesAttributeNames[(rootPitchClass+4)%12];
-	if([[sequence valueOfAttributeAtTime: t named:noteName] isEqual:@"YES"]
-	   && [[sequence valueOfAttributeAtTime: t named:relatedNoteName] isEqual:@"NO"] ) {
+	notePitch = (rootPitchClass+5)%12;
+	int relatedNotePitch = (rootPitchClass+4)%12;
+	if(   BBMusicAnalysisPitchIsPresent(sequence, t, notePitch)
+	   && !BBMusicAnalysisPitchIsPresent(sequence, t, relatedNotePitch) ) {
 		if( [addedNote isEqualToString:@"4"] )
 			return YES;
 		foundAddedNoteInData = TRUE;
