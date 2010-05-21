@@ -57,6 +57,8 @@
 		F873EC870F5FDBB500A07D0A /* BBBassIsThirdDegreeFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F873EC810F5FDBB500A07D0A /* BBBassIsThirdDegreeFeature.m */; };
 		F88457400AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F884573E0AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.h */; };
 		F88457410AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F884573F0AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.m */; };
+		F8A9187111A690D20003962F /* BBMusicAnalysisWithAbsValues.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A9186F11A690D20003962F /* BBMusicAnalysisWithAbsValues.h */; };
+		F8A9187211A690D20003962F /* BBMusicAnalysisWithAbsValues.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A9187011A690D20003962F /* BBMusicAnalysisWithAbsValues.m */; };
 		F8B93AC20C4CB35400B9A05B /* BBTextRecognitionFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F8B93ABE0C4CB35400B9A05B /* BBTextRecognitionFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8B93AC30C4CB35400B9A05B /* BBTextRecognitionFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B93ABF0C4CB35400B9A05B /* BBTextRecognitionFeature.m */; };
 		F8B93AC40C4CB35400B9A05B /* BBTextRecognitionFeatureManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F8B93AC00C4CB35400B9A05B /* BBTextRecognitionFeatureManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -255,6 +257,8 @@
 		F89B46910A7515BF008BB54B /* SeqLearning-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SeqLearning-Info.plist"; sourceTree = "<group>"; };
 		F89E4EA00A76450C0017264F /* BBArffFormattedSequenceReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBArffFormattedSequenceReader.h; sourceTree = "<group>"; };
 		F89E4EA10A76450C0017264F /* BBArffFormattedSequenceReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBArffFormattedSequenceReader.m; sourceTree = "<group>"; };
+		F8A9186F11A690D20003962F /* BBMusicAnalysisWithAbsValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMusicAnalysisWithAbsValues.h; sourceTree = "<group>"; };
+		F8A9187011A690D20003962F /* BBMusicAnalysisWithAbsValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMusicAnalysisWithAbsValues.m; sourceTree = "<group>"; };
 		F8B93ABE0C4CB35400B9A05B /* BBTextRecognitionFeature.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BBTextRecognitionFeature.h; sourceTree = "<group>"; };
 		F8B93ABF0C4CB35400B9A05B /* BBTextRecognitionFeature.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BBTextRecognitionFeature.m; sourceTree = "<group>"; };
 		F8B93AC00C4CB35400B9A05B /* BBTextRecognitionFeatureManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BBTextRecognitionFeatureManager.h; sourceTree = "<group>"; };
@@ -513,6 +517,7 @@
 		F84099160A6E24F800F5DEE7 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F8A9186C11A690410003962F /* MusicAnalysisTesiNadia */,
 				F8386E250EFFD44600632C90 /* TFBSPrediction */,
 				F8FDADFD0ADE9A070026F1BF /* BBFeaturesManager.h */,
 				F8FDADFE0ADE9A070026F1BF /* BBFeaturesManager.m */,
@@ -599,6 +604,15 @@
 				F86DE17C110759B200CA0E94 /* BBHMM.m */,
 			);
 			name = Learners;
+			sourceTree = "<group>";
+		};
+		F8A9186C11A690410003962F /* MusicAnalysisTesiNadia */ = {
+			isa = PBXGroup;
+			children = (
+				F8A9186F11A690D20003962F /* BBMusicAnalysisWithAbsValues.h */,
+				F8A9187011A690D20003962F /* BBMusicAnalysisWithAbsValues.m */,
+			);
+			name = MusicAnalysisTesiNadia;
 			sourceTree = "<group>";
 		};
 		F8B93ABD0C4CB33500B9A05B /* TextRecognition */ = {
@@ -704,6 +718,7 @@
 				F871480E1109ABC600425688 /* BBMcCallumFeature.h in Headers */,
 				F87148111109ABCE00425688 /* BBMatrix.h in Headers */,
 				F872A93E11A13EEA00B893C0 /* BBMusicAnalysisWithPitches.h in Headers */,
+				F8A9187111A690D20003962F /* BBMusicAnalysisWithAbsValues.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,6 +907,7 @@
 				F86BAA54100CAB1200E644BF /* BBTFBSPredictionNuclPosFeature.m in Sources */,
 				F87148241109AC0200425688 /* BBMatrix.m in Sources */,
 				F872A93C11A13DE800B893C0 /* BBMusicAnalysis.m in Sources */,
+				F8A9187211A690D20003962F /* BBMusicAnalysisWithAbsValues.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

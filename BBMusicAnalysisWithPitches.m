@@ -27,112 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #import <SeqLearning/BBExceptions.h>
 #import <SeqLearning/BBSequence.h>
 
-NSString* BBMusicAnalysisNotesAttributeNames[12]=
-	{@"C",@"C#",@"D",@"D#",@"E",@"F",@"F#",@"G",@"G#",@"A",@"A#",@"B"};
 
-NSString* BBMusicAnalysisMetricRelevanceAttributeName = @"Meter";
-NSString* BBMusicAnalysisRootFinderPredictionAttributeNames[5] =
-	{@"RF1", @"RF2", @"RF3", @"RF4", @"RF5"};
-NSString* BBMusicAnalysisLabelAttributeName = @"Chord";
-NSString* BBMusicAnalysisBassAttributeName = @"Bass";
-
-
-NSString* BBMusicAnalysisInternalException = @"BBMusicAnalysisInternalException";
-
-NSString* BBMajMode=@"M";
-NSString* BBMinMode=@"m";
-NSString* BBDimMode=@"d";
-
-
-int BBNoteNameToPitchClassWP(NSString* noteName) {
-	static int firstCharToPitch[7] ={9,11,0,2,4,5,7}; /* from A to G */
-	int rootPitchNumber = firstCharToPitch[[noteName characterAtIndex:0]-'A'];
-	
-	if( [noteName length]<2 ) {
-		return rootPitchNumber;
-	}
-	
-	switch([noteName characterAtIndex:1]){
-		case '_':
-		 	break;
-		case '#':
-			++rootPitchNumber; 
-			break;
-		case 'b':
-			--rootPitchNumber; 
-			break;
-		default: @throw 
-			[NSException exceptionWithName:BBGenericError 
-									reason: [NSString stringWithFormat:
-											 @"Error in the format of label %@. Expected #,b, or _ but ``%c'' found",
-											 noteName, [noteName characterAtIndex:1]]
-								  userInfo: nil];
-	}
-	
-	return rootPitchNumber;
-}
-
-int BBAddedNoteToPitchClassWP(unsigned int root_pitch, NSString* addedNote) {		
-	switch ([addedNote intValue]) {
-		case 7:
-			return (root_pitch+10)%12;
-		case 6:
-			return (root_pitch+9)%12;
-		case 4:
-			return (root_pitch+5)%12;
-	}
-	
-	@throw [NSException exceptionWithName:BBGenericError
-								   reason:[NSString stringWithFormat:@"Added note expected, but got %@", addedNote]
-								 userInfo:nil];
-}
-
-
-int BBChordNameToPitchClassWP(NSString* chordName) {
-	return BBNoteNameToPitchClass(chordName);
-}
-
-NSString* BBChordNameToAddedNoteWP(NSString* chordName) {
-	static NSString* seven=@"7";
-	static NSString* six=@"6";
-	static NSString* four=@"4";
-	
-	if([chordName length]<4)
-		return @"";
-	
-	switch( [chordName characterAtIndex:3] ) {
-		case '7': return seven;
-		case '6': return six;
-		case '4': return four;
-		default: @throw [NSException exceptionWithName:BBMusicAnalysisInternalException
-												reason:[NSString stringWithFormat:@"Added note different note in chord %@ is not supported", chordName]
-											  userInfo:nil];
-	}
-}
-
-NSString* BBChordNameToModeWP(NSString* chordName) {
-	if( [chordName length]<3 ) {
-		@throw [NSException exceptionWithName:BBGenericError
-									   reason:[NSString stringWithFormat:
-												@"chord ``%@'' is too short (3 characters at least were expected)",
-												chordName]
-									 userInfo: nil];
-	}
-
-	
-	switch([chordName characterAtIndex:2]) {
-		case 'M': return BBMajMode;
-		case 'm': return BBMinMode;
-		case 'd': return BBDimMode;
-		case 'h': return BBDimMode;
-		default: @throw 
-			[NSException exceptionWithName:BBGenericError 
-									reason: [NSString stringWithFormat:
-											 @"Error in the format of label %@. Expected M,m, or d but ``%c'' found",
-											 chordName, [chordName characterAtIndex:2]]
-							userInfo: nil];
-	}
-}
 
 
 unsigned int BBNumberOfChordNotesAssertedInEventWP(NSString* target_label, BBSequence* sequence, unsigned int t) {
@@ -216,26 +111,11 @@ unsigned int BBNumberOfChordNotesAssertedInEventWP(NSString* target_label, BBSeq
 }
 
 
-BOOL BBAreChordsParallelTonesWP(NSString* chord1, NSString* chord2) {
-	NSString* mode1=BBChordNameToMode(chord1);
-	NSString* mode2=BBChordNameToMode(chord2);
-	
-	if( mode1 == BBDimMode || mode2 == BBDimMode || mode1 == mode2 ) {
-		return NO;
-	}
-	
-	int maj_pitch = (mode1 == BBMajMode ? BBChordNameToPitchClass(chord1) : BBChordNameToPitchClass(chord2) );
-	int min_pitch = (mode1 == BBMinMode ? BBChordNameToPitchClass(chord1) : BBChordNameToPitchClass(chord2) );
-	
-	return maj_pitch == (min_pitch+3)%12;	
-}
+
 
 BOOL BBMusicAnalysisPitchIsPresentWP(BBSequence* sequence, unsigned int t, unsigned int pitch) {
 	NSString* noteName = BBMusicAnalysisNotesAttributeNames[pitch];
 	return [[sequence valueOfAttributeAtTime: t named:noteName] isEqualToString:@"YES"]; 
-//
-//	
-//	return BBMusicAnalysisPitchIsPresentWP( s, p );
 }
 
 NSString* BBMusicAnalysisValueForAttributeAtTimeWP(BBSequence* sequence, unsigned int t, NSString* attributeName) {
