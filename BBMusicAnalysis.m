@@ -159,3 +159,8 @@ BOOL BBMusicAnalysisPitchIsPresent(BBSequence* sequence, unsigned int t, unsigne
 }
 
 
+int BBMusicAnalysisBassPitchAtTime(BBSequence* sequence, unsigned int t) {
+	DISPATCH_BY_FORMAT(BBMusicAnalysisBassPitchAtTimeWP(sequence, t),
+					   BBMusicAnalysisBassPitchAtTimeAV(sequence, t));
+}
+

@@ -19,7 +19,7 @@
 	
 	//unsigned int bass_pitch = BBNoteNameToPitchClass([sequence valueOfAttributeAtTime:t named:BBMusicAnalysisBassAttributeName]);
 	
-	unsigned int bass_pitch = BBNoteNameToPitchClass(BBMusicAnalysisValueForAttributeAtTime(sequence, t, BBMusicAnalysisBassAttributeName));
+	unsigned int bass_pitch = BBMusicAnalysisBassPitchAtTime(sequence, t);
 	
 	return (root_pitch+7)%12 == bass_pitch;	
 }

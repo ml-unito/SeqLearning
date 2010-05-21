@@ -111,3 +111,6 @@ BOOL BBMusicAnalysisPitchIsPresentAV(BBSequence* sequence, unsigned int t, unsig
 }
 
 
+int BBMusicAnalysisBassPitchAtTimeAV(BBSequence* sequence, unsigned int t) {
+	return [[sequence valueOfAttributeAtTime:t named:@"Bass"] intValue] % 12;
+}

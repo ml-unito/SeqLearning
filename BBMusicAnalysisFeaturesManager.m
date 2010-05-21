@@ -147,33 +147,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 								 forKey:feature];
 	++lastCategory;
 	
-	// Chord Distance
-	/*
-	 NSArray* modes = [NSArray arrayWithObjects:@"M",@"m",@"d", nil];
-	 
-	 int distance;
-	 for(distance=0; distance<12; ++distance) {
-		 NSEnumerator* prevModesEnumerator = [modes objectEnumerator];
-		 NSString* prevMode;
-		 
-		 while( prevMode = [prevModesEnumerator nextObject] ) {
-			 NSEnumerator* currModesEnumerator = [modes objectEnumerator];
-			 NSString* currMode;
-			 
-			 while( currMode = [currModesEnumerator nextObject] ) {
-				 feature = [[[BBChordDistanceFeature alloc] init] autorelease];
-				 [feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
-					 [NSNumber numberWithInt:distance],BBChordDistanceFeatureKeyDistance,
-					 prevMode, BBChordDistanceFeatureKeyPrevMode,
-					 currMode, BBChordDistanceFeatureKeyCurrMode,
-					 nil]];
-				 [featureSet addObject:feature];
-			 }			
-		 }			
-	 }*/
-	
-// #warning COMMENTED OUT BY BOBO
-	
+
 	// M 5 M
 	feature = [[[BBChordDistanceFeature alloc] init] autorelease];
 	[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -455,14 +429,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	
 	++lastCategory;	
 	
-	/*	int rootFinderPrediction;
-	for( rootFinderPrediction=0; rootFinderPrediction<5; ++rootFinderPrediction) {
-		feature = [[[BBRootFinderPredictionsFeature alloc] init] autorelease];
-		[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
-			[NSNumber numberWithInt:rootFinderPrediction], BBRootFinderPredictionsFeatureKeyRFNumber,
-			nil]];
-		[featureSet addObject:feature];
-	} */
 	
 	int numNotes;
 	for( numNotes=0; numNotes<5; ++numNotes ) {
@@ -474,53 +440,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory]
 									 forKey:feature];
 	}
-//	++lastCategory;
-	
-	
-//#warning NEW BY BOBO
-//	NSEnumerator* prevLabelEnumerator = [labelSet objectEnumerator];
-//	NSString* prevLabel;
-//	while(prevLabel=[prevLabelEnumerator nextObject]) {
-//		NSEnumerator* currLabelEnumerator = [labelSet objectEnumerator];
-//		NSString* currLabel;
-//		while( currLabel = [currLabelEnumerator nextObject] ) {
-//			feature = [[[BBChordTransitionFeature alloc] init] autorelease];
-//			[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
-//				currLabel, BBChordTransitionFeatureKeyCurrChord,
-//				prevLabel, BBChordTransitionFeatureKeyPrevChord,
-//				nil]];
-//			[featureSet addObject:feature];
-//			[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory]
-//											   forKey:feature];
-//		}
-//	}
-//	
-//	++lastCategory;
 
-		
-	/* Labels feature may hinder generalization when the classifier is used to
-		classify labels that were totally unkown at learning time. 
-		
-		
-		
-		if(![[[[experimentDocument sequenceSet] labelDescription] info] isKindOfClass:[NSSet class]]) {
-			@throw [NSException exceptionWithName:BBConfigurationError
-										   reason:
-				[NSString stringWithFormat:@"Label feature should be of nominal class while it is of class``%@''",
-					[[[[experimentDocument sequenceSet] labelDescription] info] className]]
-										 userInfo:nil];
-		}
-	
-	
-	NSEnumerator* labelEnumerator = [(NSArray*)[[[experimentDocument sequenceSet] labelDescription] info] objectEnumerator];
-	NSString* label;
-	while(label=[labelEnumerator nextObject]) {
-		feature = [[[BBLabelFeature alloc] init] autorelease];
-		[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
-			label, BBLabelFeatureKeyChordName,
-			nil]];
-		[featureSet addObject:feature];
-	} */
 	
 	return featureSet;
 }

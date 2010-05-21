@@ -122,3 +122,6 @@ NSString* BBMusicAnalysisValueForAttributeAtTimeWP(BBSequence* sequence, unsigne
 	return [sequence valueOfAttributeAtTime:t named:attributeName];	
 }
 
+int BBMusicAnalysisBassPitchAtTimeWP(BBSequence* sequence, unsigned int t) {
+	return BBNoteNameToPitchClass([sequence valueOfAttributeAtTime:t named:@"Bass"]);
+}

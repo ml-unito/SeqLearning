@@ -24,9 +24,7 @@
 															added_note);
 
 	//	[sequence valueOfAttributeAtTime:t named:BBMusicAnalysisBassAttributeName];
-	NSString* bass_note = BBMusicAnalysisValueForAttributeAtTime(sequence, t, BBMusicAnalysisBassAttributeName);
-	
-	return BBNoteNameToPitchClass(bass_note) == added_note_pitch;
+	return BBMusicAnalysisBassPitchAtTime(sequence, t) == added_note_pitch;
 }
 
 

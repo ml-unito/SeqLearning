@@ -17,7 +17,7 @@
 	NSString* mode = BBChordNameToMode(target_label);
 	unsigned int root_pitch = BBChordNameToPitchClass(target_label);
 	
-	unsigned int bass_pitch = BBNoteNameToPitchClass(BBMusicAnalysisValueForAttributeAtTime(sequence, t, BBMusicAnalysisBassAttributeName));
+	unsigned int bass_pitch = BBMusicAnalysisBassPitchAtTime(sequence, t);
 	
 	if( mode  == BBMajMode ) {
 		return (root_pitch+4)%12 == bass_pitch;
