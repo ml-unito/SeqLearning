@@ -32,7 +32,11 @@ NSString* BBRootFinderPredictionsFeatureKeyRFNumber=@"RFNumber";
 
 -(BOOL) evalOnSequence:(BBSequence*) sequence forTime:(unsigned int) t {
 	int rfNumber = [[_parameters objectForKey:BBRootFinderPredictionsFeatureKeyRFNumber] intValue];
-	NSObject* rf_label = [sequence valueOfAttributeAtTime: t named:BBMusicAnalysisRootFinderPredictionAttributeNames[rfNumber]];
+	
+	NSObject* rf_label = BBMusicAnalysisValueForAttributeAtTime(sequence, t, BBMusicAnalysisRootFinderPredictionAttributeNames[rfNumber]);
+	
+	//NSObject* rf_label = [sequence valueOfAttributeAtTime: t named:BBMusicAnalysisRootFinderPredictionAttributeNames[rfNumber]];
+	
 	NSObject* target_label = [sequence labelAtTime:t];
 
 	return [rf_label isEqual:target_label];

@@ -34,22 +34,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		return NO;
 	
 	NSString* target_label = [sequence labelAtTime:t];
-	NSString* rootNoteName = BBMusicAnalysisNotesAttributeNames[BBChordNameToPitchClass(target_label)];
+	//NSString* rootNoteName = BBMusicAnalysisNotesAttributeNames[BBChordNameToPitchClass(target_label)];
+	
+	int rootPitch = BBChordNameToPitchClass(target_label);
 	
 	// If the root note is already stated in the current chord, we are not interested in investigating
 	// following chord.
 	
-	if([[sequence valueOfAttributeAtTime: t named:rootNoteName] isEqualToString:@"YES"])
-		return NO;
-	
+	if(BBMusicAnalysisPitchIsPresent(sequence,t,rootPitch))
+	   return NO;
+		
+	//if([[sequence valueOfAttributeAtTime: t named:rootNoteName] isEqualToString:@"YES"])
+	//	return NO;
+	   
 	if( BBNumberOfChordNotesAssertedInEvent(target_label,sequence,t)<2 )
 		return NO;
 	
 	if( BBNumberOfChordNotesAssertedInEvent(target_label,sequence,t+1)<2 )
 		return NO;
+	   
+	if(BBMusicAnalysisPitchIsPresent(sequence,t+1,rootPitch))
+	   	return YES;
 	
-	if([[sequence valueOfAttributeAtTime: t+1 named:rootNoteName] isEqualToString:@"YES"])
-		return YES;
+	//if([[sequence valueOfAttributeAtTime: t+1 named:rootNoteName] isEqualToString:@"YES"])
+	//	return YES;
 	
 	return NO;	
 }

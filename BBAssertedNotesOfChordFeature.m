@@ -33,7 +33,7 @@ NSString* BBAssertedNotesOfChordFeatureKeyNumber = @"Number";
 
 -(BOOL) evalOnSequence:(BBSequence*) sequence forTime:(unsigned int) t {
 	int numberOfAssertedNotes = [[_parameters objectForKey:BBAssertedNotesOfChordFeatureKeyNumber] intValue];
-	
+
 	if( numberOfAssertedNotes >= 0 )
 		return numberOfAssertedNotes ==	BBNumberOfChordNotesAssertedInEvent([sequence labelAtTime:t],sequence,t);
 	else {

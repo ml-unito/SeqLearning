@@ -103,20 +103,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	for(i=0;i<4;++i){
 		if (chordPitchClasses[i] == -1) 
 			continue;
-		NSString* noteName = BBMusicAnalysisNotesAttributeNames[chordPitchClasses[i]];
-		if([[sequence valueOfAttributeAtTime: t named:noteName] isEqualToString:@"YES"]){
+		int notePitch = chordPitchClasses[i];
+		
+		if(BBMusicAnalysisPitchIsPresent(sequence, t, notePitch)){
 			++counter;
 		}
+		
+		/*if([[sequence valueOfAttributeAtTime: t named:noteName] isEqualToString:@"YES"]){
+			++counter;
+		}*/
 	}
 	
 
 	
 	int num_asserted_pitches = 0;
 	for( i=0; i<12; ++i) {
-		NSString* noteName = BBMusicAnalysisNotesAttributeNames[i];
-		if([[sequence valueOfAttributeAtTime: t named:noteName] isEqualToString:@"YES"]){
+		int notePitch = i;
+		
+		/*if([[sequence valueOfAttributeAtTime: t named:noteName] isEqualToString:@"YES"]){
 			++num_asserted_pitches;
-		}				
+		}*/
+		
+		if(BBMusicAnalysisPitchIsPresent(sequence, t, notePitch)){
+			++num_asserted_pitches;
+		}
 	}
 	
 	if( num_asserted_pitches!=counter )
