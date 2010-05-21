@@ -15,8 +15,6 @@
 -(BOOL) evalOnSequence:(BBSequence*) sequence forTime:(unsigned int) t {
 	NSString* target_label = [sequence labelAtTime:t]; 
 	
-	//NSString* target_label = BBMusicAnalysisValueForAttributeAtTime(sequence, t, BBMusicAnalysisTargetAttributeName);
-	
 	unsigned int root_pitch = BBChordNameToPitchClass(target_label);
 	
 	//unsigned int bass_pitch = BBNoteNameToPitchClass([sequence valueOfAttributeAtTime:t named:BBMusicAnalysisBassAttributeName]);
