@@ -114,3 +114,18 @@ BOOL BBMusicAnalysisPitchIsPresentAV(BBSequence* sequence, unsigned int t, unsig
 int BBMusicAnalysisBassPitchAtTimeAV(BBSequence* sequence, unsigned int t) {
 	return [[sequence valueOfAttributeAtTime:t named:@"Bass"] intValue] % 12;
 }
+
+
+int BBMusicAnalysisPitchCountAV(BBSequence* sequence, unsigned int t, unsigned int pitch_class) {
+	int av_p; // iterates over notes in the current event
+	int counter = 0;
+	for(av_p=AV_START_INDEX; av_p<=AV_END_INDEX; av_p+=2) {
+		int curr_av = [[sequence valueOfAttributeAtTime:t andPosition:av_p] intValue];
+		if(curr_av==0) break;
+		
+		if( curr_av % 12 == pitch_class )
+			counter += [[sequence valueOfAttributeAtTime:t andPosition:av_p+1] intValue];
+	}
+	
+	return counter;	
+}

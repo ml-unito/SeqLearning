@@ -57,6 +57,10 @@
 		F873EC870F5FDBB500A07D0A /* BBBassIsThirdDegreeFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F873EC810F5FDBB500A07D0A /* BBBassIsThirdDegreeFeature.m */; };
 		F88457400AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F884573E0AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.h */; };
 		F88457410AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F884573F0AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.m */; };
+		F88E782911A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F88E782711A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.h */; };
+		F88E782A11A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F88E782811A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m */; };
+		F88E784511A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F88E784311A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h */; };
+		F88E784611A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F88E784411A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m */; };
 		F8A9187111A690D20003962F /* BBMusicAnalysisWithAbsValues.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A9186F11A690D20003962F /* BBMusicAnalysisWithAbsValues.h */; };
 		F8A9187211A690D20003962F /* BBMusicAnalysisWithAbsValues.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A9187011A690D20003962F /* BBMusicAnalysisWithAbsValues.m */; };
 		F8B93AC20C4CB35400B9A05B /* BBTextRecognitionFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F8B93ABE0C4CB35400B9A05B /* BBTextRecognitionFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -250,6 +254,10 @@
 		F873EC810F5FDBB500A07D0A /* BBBassIsThirdDegreeFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBassIsThirdDegreeFeature.m; sourceTree = "<group>"; };
 		F884573E0AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBChordAgreementWithNextAccentedEventFeature.h; sourceTree = "<group>"; };
 		F884573F0AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBChordAgreementWithNextAccentedEventFeature.m; sourceTree = "<group>"; };
+		F88E782711A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRepetitionsOfRootNoteFeature.h; sourceTree = "<group>"; };
+		F88E782811A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRepetitionsOfRootNoteFeature.m; sourceTree = "<group>"; };
+		F88E784311A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMusicAnalysisWithAbsFeaturesManager.h; sourceTree = "<group>"; };
+		F88E784411A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMusicAnalysisWithAbsFeaturesManager.m; sourceTree = "<group>"; };
 		F89B43BA0A712638008BB54B /* BBHMPerceptron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHMPerceptron.h; sourceTree = "<group>"; };
 		F89B43BB0A712638008BB54B /* BBHMPerceptron.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHMPerceptron.m; sourceTree = "<group>"; };
 		F89B43D60A71274E008BB54B /* BBSequenceLearner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSequenceLearner.h; sourceTree = "<group>"; };
@@ -611,6 +619,10 @@
 			children = (
 				F8A9186F11A690D20003962F /* BBMusicAnalysisWithAbsValues.h */,
 				F8A9187011A690D20003962F /* BBMusicAnalysisWithAbsValues.m */,
+				F88E782711A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.h */,
+				F88E782811A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m */,
+				F88E784311A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h */,
+				F88E784411A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m */,
 			);
 			name = MusicAnalysisTesiNadia;
 			sourceTree = "<group>";
@@ -719,6 +731,8 @@
 				F87148111109ABCE00425688 /* BBMatrix.h in Headers */,
 				F872A93E11A13EEA00B893C0 /* BBMusicAnalysisWithPitches.h in Headers */,
 				F8A9187111A690D20003962F /* BBMusicAnalysisWithAbsValues.h in Headers */,
+				F88E782911A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.h in Headers */,
+				F88E784511A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,6 +922,8 @@
 				F87148241109AC0200425688 /* BBMatrix.m in Sources */,
 				F872A93C11A13DE800B893C0 /* BBMusicAnalysis.m in Sources */,
 				F8A9187211A690D20003962F /* BBMusicAnalysisWithAbsValues.m in Sources */,
+				F88E782A11A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m in Sources */,
+				F88E784611A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
