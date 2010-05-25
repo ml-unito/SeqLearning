@@ -32,9 +32,6 @@
 
 -(NSMutableArray*) initFeaturesUsingLabelSet:(NSSet*) labelSet {
 	BBFeature* feature;
-	BBFeature* feature1;
-	BBFeature* feature2;
-	BBFeature* feature3;
 	NSMutableArray* featureSet;
 	unsigned int lastCategory=0;
 	
@@ -46,20 +43,33 @@
 		feature= [[[BBRepetitionsOfRootNoteFeature alloc] init] autorelease];
 		[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
 								[NSNumber numberWithInt:i],BBRepetitionsOfRootNoteFeatureKeyNum, nil]]; 
-		[featureSet addObject:feature];
-		
-		feature1= [[[BBRepetitionsOfThirdDegreeFeature alloc] init] autorelease];
+		[featureSet addObject:feature];		
+		[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory]
+										   forKey:feature]; 
+	}	
+	lastCategory++;
+	
+	for(i=0; i<4; ++i) {
+		feature= [[[BBRepetitionsOfThirdDegreeFeature alloc] init] autorelease];
 		[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
 								[NSNumber numberWithInt:i],BBRepetitionsOfThirdDegreeFeatureKeyNum, nil]]; 
-		[featureSet addObject:feature1];
-		
-		feature2= [[[BBRepetitionsOfFifthDegreeFeature alloc] init] autorelease];
+		[featureSet addObject:feature];
+		[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory]
+										   forKey:feature]; 
+	}
+	lastCategory++;
+	
+	
+	for(i=0; i<4; ++i) {
+		feature= [[[BBRepetitionsOfFifthDegreeFeature alloc] init] autorelease];
 		[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
 								[NSNumber numberWithInt:i],BBRepetitionsOfFifthDegreeFeatureKeyNum, nil]]; 
-		[featureSet addObject:feature2];
+		[featureSet addObject:feature];
+		[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory]
+										   forKey:feature]; 
 	}
-	[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory++]
-									   forKey:[featureSet lastObject]]; 
+	lastCategory++;
+	
 
 	[featureSet addObject:[[[BBAssertedAddedNoteFeature alloc] init] autorelease]];
 	[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory++]
