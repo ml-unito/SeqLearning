@@ -24,24 +24,39 @@
 #import <SeqLearning/BBBassIsFifthDegreeFeature.h>
 #import <SeqLearning/BBBassIsAddedNoteFeature.h>
 #import <SeqLearning/BBRepetitionsOfRootNoteFeature.h>
+#import <SeqLearning/BBRepetitionsOfThirdDegreeFeature.h>
+#import <SeqLearning/BBRepetitionsOfFifthDegreeFeature.h>
 
 
 @implementation BBMusicAnalysisWithAbsFeaturesManager
 
 -(NSMutableArray*) initFeaturesUsingLabelSet:(NSSet*) labelSet {
 	BBFeature* feature;
+	BBFeature* feature1;
+	BBFeature* feature2;
+	BBFeature* feature3;
 	NSMutableArray* featureSet;
 	unsigned int lastCategory=0;
 	
 	featureSet = [NSMutableArray arrayWithCapacity:100];
 	
-	// asserted root note
+	// asserted root note & third & fifth degree
 	int i;
 	for(i=0; i<4; ++i) {
 		feature= [[[BBRepetitionsOfRootNoteFeature alloc] init] autorelease];
 		[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
 								[NSNumber numberWithInt:i],BBRepetitionsOfRootNoteFeatureKeyNum, nil]]; 
 		[featureSet addObject:feature];
+		
+		feature1= [[[BBRepetitionsOfThirdDegreeFeature alloc] init] autorelease];
+		[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
+								[NSNumber numberWithInt:i],BBRepetitionsOfThirdDegreeFeatureKeyNum, nil]]; 
+		[featureSet addObject:feature1];
+		
+		feature2= [[[BBRepetitionsOfFifthDegreeFeature alloc] init] autorelease];
+		[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
+								[NSNumber numberWithInt:i],BBRepetitionsOfFifthDegreeFeatureKeyNum, nil]]; 
+		[featureSet addObject:feature2];
 	}
 	[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory++]
 									   forKey:[featureSet lastObject]]; 

@@ -10,6 +10,10 @@
 		C220E0BE0DC719B400BF1698 /* BBPriorityQueueWithUpdatableKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = C220E0BC0DC719B400BF1698 /* BBPriorityQueueWithUpdatableKeys.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C220E0BF0DC719B400BF1698 /* BBPriorityQueueWithUpdatableKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = C220E0BD0DC719B400BF1698 /* BBPriorityQueueWithUpdatableKeys.m */; };
 		C220E0CA0DC71B0200BF1698 /* BBPriorityQueueBase.h in Headers */ = {isa = PBXBuildFile; fileRef = C220E0C80DC71B0200BF1698 /* BBPriorityQueueBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAD9706211A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = DAD9706011A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.h */; };
+		DAD9706311A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD9706111A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.m */; };
+		DAD9707511A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = DAD9707311A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.h */; };
+		DAD9707611A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD9707411A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.m */; };
 		F818FECA0ECC533E00B154A1 /* SeqLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CB3D740A777175009B9DF3 /* SeqLearning.framework */; };
 		F81BDD5C0EEC4135004E4735 /* BBSimpleAttributeFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F81BDD5A0EEC4135004E4735 /* BBSimpleAttributeFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F81BDD5D0EEC4135004E4735 /* BBSimpleAttributeFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F81BDD5B0EEC4135004E4735 /* BBSimpleAttributeFeature.m */; };
@@ -173,6 +177,10 @@
 		C2BD71DB0A6E6A9A00A566E6 /* BBAssertedNotesOfChordFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBAssertedNotesOfChordFeature.h; sourceTree = "<group>"; };
 		C2BD71DC0A6E6A9A00A566E6 /* BBAssertedNotesOfChordFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBAssertedNotesOfChordFeature.m; sourceTree = "<group>"; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		DAD9706011A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRepetitionsOfThirdDegreeFeature.h; sourceTree = "<group>"; };
+		DAD9706111A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRepetitionsOfThirdDegreeFeature.m; sourceTree = "<group>"; };
+		DAD9707311A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRepetitionsOfFifthDegreeFeature.h; sourceTree = "<group>"; };
+		DAD9707411A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRepetitionsOfFifthDegreeFeature.m; sourceTree = "<group>"; };
 		F808BBF71108C9800075E03D /* BBMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMatrix.h; sourceTree = "<group>"; };
 		F808BBF81108C9800075E03D /* BBMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMatrix.m; sourceTree = "<group>"; };
 		F80E1A831109FE7F005EFCEB /* BBObjectCacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBObjectCacher.h; sourceTree = "<group>"; };
@@ -623,6 +631,10 @@
 				F88E782811A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m */,
 				F88E784311A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h */,
 				F88E784411A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m */,
+				DAD9706011A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.h */,
+				DAD9706111A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.m */,
+				DAD9707311A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.h */,
+				DAD9707411A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.m */,
 			);
 			name = MusicAnalysisTesiNadia;
 			sourceTree = "<group>";
@@ -733,6 +745,8 @@
 				F8A9187111A690D20003962F /* BBMusicAnalysisWithAbsValues.h in Headers */,
 				F88E782911A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.h in Headers */,
 				F88E784511A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h in Headers */,
+				DAD9706211A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.h in Headers */,
+				DAD9707511A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,6 +938,8 @@
 				F8A9187211A690D20003962F /* BBMusicAnalysisWithAbsValues.m in Sources */,
 				F88E782A11A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m in Sources */,
 				F88E784611A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m in Sources */,
+				DAD9706311A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.m in Sources */,
+				DAD9707611A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
