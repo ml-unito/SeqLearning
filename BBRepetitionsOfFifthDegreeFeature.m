@@ -30,7 +30,7 @@ NSString* BBRepetitionsOfFifthDegreeFeatureKeyNum = @"Number";
 	if( num_repetitions < 3  )
 		return num_repetitions == fifth_rep_in_event;
 	else
-		return num_repetitions >= num_repetitions;
+		return num_repetitions <= fifth_rep_in_event;
 }
 
 -(unsigned int) orderOfMarkovianAssumption {

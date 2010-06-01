@@ -42,7 +42,7 @@ NSString* BBRepetitionsOfThirdDegreeFeatureKeyNum = @"Number";
 	if( num_repetitions < 3  )
 		return num_repetitions == third_rep_in_event;
 	else
-		return num_repetitions >= num_repetitions;
+		return num_repetitions <= third_rep_in_event;
 }
 
 -(unsigned int) orderOfMarkovianAssumption {

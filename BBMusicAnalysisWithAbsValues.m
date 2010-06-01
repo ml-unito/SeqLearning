@@ -95,8 +95,6 @@ unsigned int BBNumberOfChordNotesAssertedInEventAV(NSString* target_label, BBSeq
 }
 
 
-
-
 BOOL BBMusicAnalysisPitchIsPresentAV(BBSequence* sequence, unsigned int t, unsigned int pitch_class) {
 	int av_p; // iterates over notes in the current event
 	for(av_p=AV_START_INDEX; av_p<=AV_END_INDEX; av_p+=2) {
@@ -110,9 +108,35 @@ BOOL BBMusicAnalysisPitchIsPresentAV(BBSequence* sequence, unsigned int t, unsig
 	return FALSE;
 }
 
+// A close absolute pitch is a pitch that is at distance 1 or 2 from the given pitch (note that
+// pitches at distance 0 are not close!)
+BOOL BBMusicAnalysisClosePitchIsPresentAV(BBSequence* sequence, unsigned int t, unsigned int pitch_class){
+	int av_p; // iterates over notes in the current event
+	for(av_p=AV_START_INDEX; av_p<=AV_END_INDEX; av_p+=2) {
+		int curr_av = [[sequence valueOfAttributeAtTime:t andPosition:av_p] intValue];
+		if(curr_av==0) break;
+		unsigned int distance = abs((curr_av % 12) - pitch_class +12)%12;
+		if(distance == 1 || distance == 2) return TRUE;
+	}
+	
+	return FALSE;
+}
 
 int BBMusicAnalysisBassPitchAtTimeAV(BBSequence* sequence, unsigned int t) {
 	return [[sequence valueOfAttributeAtTime:t named:@"Bass"] intValue] % 12;
+}
+
+//funzione che mi restituisce la pitch class dell'added note relativa all'accordo
+int BBMusicAnalysisAddedAtTimeAV(BBSequence* sequence, unsigned int t) {
+	
+	NSString* target_label = [sequence labelAtTime:t];
+	NSString* addedNote = BBChordNameToAddedNote(target_label);
+	int root_pitch = BBChordNameToPitchClass(target_label);
+	if( [addedNote isEqualToString:@""] )   return -1;
+	if( [addedNote isEqualToString:@"7"])	return (root_pitch+10)%12;
+	if( [addedNote isEqualToString:@"6"])	return (root_pitch+9)%12;
+	if( [addedNote isEqualToString:@"4"])	return (root_pitch+4)%12;
+	return -1;
 }
 
 

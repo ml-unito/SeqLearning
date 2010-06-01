@@ -26,6 +26,7 @@
 #import <SeqLearning/BBRepetitionsOfRootNoteFeature.h>
 #import <SeqLearning/BBRepetitionsOfThirdDegreeFeature.h>
 #import <SeqLearning/BBRepetitionsOfFifthDegreeFeature.h>
+#import <SeqLearning/BBRepetitionsOfAddedNoteFeature.h>
 
 
 @implementation BBMusicAnalysisWithAbsFeaturesManager
@@ -70,10 +71,15 @@
 	}
 	lastCategory++;
 	
-
-	[featureSet addObject:[[[BBAssertedAddedNoteFeature alloc] init] autorelease]];
-	[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory++]
-									   forKey:[featureSet lastObject]];
+	for(i=0; i<4; ++i) {
+		feature= [[[BBRepetitionsOfAddedNoteFeature alloc] init] autorelease];
+		[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
+								[NSNumber numberWithInt:i],BBRepetitionsOfAddedNoteFeatureKeyNum, nil]]; 
+		[featureSet addObject:feature];
+		[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory]
+										   forKey:feature]; 
+	}
+	lastCategory++;
 	
 	[featureSet addObject:[[[BBCompletelyStatedChordFeature alloc] init] autorelease]];
 	[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory++]

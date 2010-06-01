@@ -3,6 +3,8 @@
 #import "BBMusicAnalysisWithPitches.h"
 #import "BBMusicAnalysisWithAbsValues.h"
 
+#define min(x,y) (x) < (y) ? (x) : (y)
+
 
 NSString* BBMusicAnalysisNotesAttributeNames[12]=
 {@"C",@"C#",@"D",@"D#",@"E",@"F",@"F#",@"G",@"G#",@"A",@"A#",@"B"};
@@ -164,3 +166,8 @@ int BBMusicAnalysisBassPitchAtTime(BBSequence* sequence, unsigned int t) {
 					   BBMusicAnalysisBassPitchAtTimeAV(sequence, t));
 }
 
+
+unsigned int BBMusicAnalysisPitchClassDistance(unsigned int x, unsigned int y) {
+	int diff = abs(x-y);
+	return min( 12 - diff, diff );
+}

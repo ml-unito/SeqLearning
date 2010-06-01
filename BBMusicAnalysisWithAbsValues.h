@@ -12,3 +12,5 @@ int BBMusicAnalysisPitchCountAV(BBSequence* sequence, unsigned int t, unsigned i
 unsigned int BBNumberOfChordNotesAssertedInEventAV(NSString* target_label, BBSequence* sequence, unsigned int t);
 BOOL BBMusicAnalysisPitchIsPresentAV(BBSequence* sequence, unsigned int t, unsigned int pitch);
 int BBMusicAnalysisBassPitchAtTimeAV(BBSequence* sequence, unsigned int t);
+int BBMusicAnalysisAddedAtTimeAV(BBSequence* sequence, unsigned int t);
+BOOL BBMusicAnalysisClosePitchIsPresentAV(BBSequence* sequence, unsigned int t, unsigned int pitch_class);
