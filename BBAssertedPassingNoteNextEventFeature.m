@@ -19,7 +19,7 @@
 
 -(BOOL) evalOnSequence:(BBSequence*) sequence forTime:(unsigned int) t {
 	
-	if(t==0) return FALSE;
+	if(t==[sequence length]-1) return FALSE;
 	
 	NSString* target_label = [sequence labelAtTime:t];
 	int root_pitch = BBChordNameToPitchClass(target_label);
@@ -28,20 +28,18 @@
 		(root_pitch+7)%12,
 		BBMusicAnalysisAddedAtTimeAV(sequence, t) };
 	
+	int num_degrees = degrees[3] != -1 ? 4 : 3;
+	
 	int i=0;
-	for( ; i<3; ++i ) {
+	for( ; i<num_degrees; ++i ) {
 		if(!BBMusicAnalysisPitchIsPresent(sequence, t, degrees[i]) && 
-		   BBMusicAnalysisClosePitchIsPresentAV(sequence, t+1, degrees[i]) )
+		    BBMusicAnalysisPitchIsPresent(sequence, t+1, degrees[i]) &&
+		    BBMusicAnalysisClosePitchIsPresentAV(sequence, t, degrees[i]))
 			return TRUE;
 	}
 	
 	
-	if(degrees[3]!=-1 && 
-	   !BBMusicAnalysisPitchIsPresent(sequence, t, degrees[3]) && 
-	   BBMusicAnalysisClosePitchIsPresentAV(sequence, t+1, degrees[3]) )
-		return TRUE;
-	else
-		return FALSE;
+	return FALSE;
 }
 
 
