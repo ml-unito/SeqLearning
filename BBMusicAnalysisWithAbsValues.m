@@ -122,22 +122,47 @@ BOOL BBMusicAnalysisClosePitchIsPresentAV(BBSequence* sequence, unsigned int t, 
 	return FALSE;
 }
 
+
+int BBMusicAnalysisPitchCompletingChordAV(BBSequence* sequence, unsigned int t, NSString* chord) {
+	ChordPitchClasses degrees = BBMusicAnalysisChordNameToChordPitchClasses(chord);
+
+	BOOL found[] = {
+		FALSE, FALSE, FALSE, FALSE
+	};
+	
+	int av_p; // iterates over notes in the current event
+	int count = 0;
+	for(av_p=AV_START_INDEX; av_p<=AV_END_INDEX; av_p+=2) {
+		int curr_av = [[sequence valueOfAttributeAtTime:t andPosition:av_p] intValue];
+		// if no more notes in this event, or we already found all chord notes than break the cycle.
+		if(curr_av==0 || count == degrees.chord_size) break;
+		
+		int i;
+		int curr_pitch_class = curr_av % 12;
+		for(i=0; i<degrees.chord_size; ++i) {
+			if(degrees.pitch_classes[i] == curr_pitch_class && !found[i]) {
+				count++;
+				found[i]=TRUE;			
+			}
+		}
+	}
+	
+	if( count == degrees.chord_size-1 ) {
+		// found a note that would complete the chord...
+		int i;
+		for(i=0; i<degrees.chord_size; ++i) {
+			if(!found[i]) return degrees.pitch_classes[i];
+		}
+	}
+	
+	// the chord is already complete or more than one note would complete it
+	return -1;
+}
+
 int BBMusicAnalysisBassPitchAtTimeAV(BBSequence* sequence, unsigned int t) {
 	return [[sequence valueOfAttributeAtTime:t named:@"Bass"] intValue] % 12;
 }
 
-//funzione che mi restituisce la pitch class dell'added note relativa all'accordo
-int BBMusicAnalysisAddedAtTimeAV(BBSequence* sequence, unsigned int t) {
-	
-	NSString* target_label = [sequence labelAtTime:t];
-	NSString* addedNote = BBChordNameToAddedNote(target_label);
-	int root_pitch = BBChordNameToPitchClass(target_label);
-	if( [addedNote isEqualToString:@""] )   return -1;
-	if( [addedNote isEqualToString:@"7"])	return (root_pitch+10)%12;
-	if( [addedNote isEqualToString:@"6"])	return (root_pitch+9)%12;
-	if( [addedNote isEqualToString:@"4"])	return (root_pitch+4)%12;
-	return -1;
-}
 
 
 int BBMusicAnalysisPitchCountAV(BBSequence* sequence, unsigned int t, unsigned int pitch_class) {

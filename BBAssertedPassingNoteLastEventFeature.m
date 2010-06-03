@@ -21,28 +21,28 @@
 
 -(BOOL) evalOnSequence:(BBSequence*) sequence forTime:(unsigned int) t {
 	if(t==0) return FALSE;
-	
-	NSString* target_label = [sequence labelAtTime:t];
-	int root_pitch = BBChordNameToPitchClass(target_label);
-	int degrees[] = { BBChordNameToPitchClass(target_label),
-					  (root_pitch+4)%12,
-					  (root_pitch+7)%12,
-					  BBMusicAnalysisAddedAtTimeAV(sequence, t) };
-	
-	int i=0;
-	for( ; i<3; ++i ) {
-		if(!BBMusicAnalysisPitchIsPresent(sequence, t, degrees[i]) && 
-			BBMusicAnalysisClosePitchIsPresentAV(sequence, t-1, degrees[i]) )
-			return TRUE;
-	}
-	
-
-	if(degrees[3]!=-1 && 
-	   !BBMusicAnalysisPitchIsPresent(sequence, t, degrees[3]) && 
-	   BBMusicAnalysisClosePitchIsPresentAV(sequence, t-1, degrees[3]) )
-		return TRUE;
-	else
-		return FALSE;
+//	
+//	NSString* target_label = [sequence labelAtTime:t];
+//	int root_pitch = BBChordNameToPitchClass(target_label);
+//	int degrees[] = { BBChordNameToPitchClass(target_label),
+//					  (root_pitch+4)%12,
+//					  (root_pitch+7)%12,
+//					  BBMusicAnalysisAddedAtTimeAV(sequence, t) };
+//	
+//	int i=0;
+//	for( ; i<3; ++i ) {
+//		if(!BBMusicAnalysisPitchIsPresent(sequence, t, degrees[i]) && 
+//			BBMusicAnalysisClosePitchIsPresentAV(sequence, t-1, degrees[i]) )
+//			return TRUE;
+//	}
+//	
+//
+//	if(degrees[3]!=-1 && 
+//	   !BBMusicAnalysisPitchIsPresent(sequence, t, degrees[3]) && 
+//	   BBMusicAnalysisClosePitchIsPresentAV(sequence, t-1, degrees[3]) )
+//		return TRUE;
+//	else
+//		return FALSE;
 }
 
 

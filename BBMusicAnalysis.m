@@ -105,6 +105,21 @@ NSString* BBChordNameToAddedNote(NSString* chordName) {
 	}
 }
 
+int BBChordNameToAddedNotePitchClass(NSString* chordName, int root_pitch) {	
+	if([chordName length]<4)
+		return -1;
+	
+	switch( [chordName characterAtIndex:3] ) {
+		case '7': return (root_pitch+10)%12;
+		case '6': return (root_pitch+9)%12;
+		case '4': return (root_pitch+4)%12;
+		default: @throw [NSException exceptionWithName:BBMusicAnalysisInternalException
+												reason:[NSString stringWithFormat:@"Added note different note in chord %@ is not supported", chordName]
+											  userInfo:nil];
+	}
+}
+
+
 NSString* BBChordNameToMode(NSString* chordName) {
 	if( [chordName length]<3 ) {
 		@throw [NSException exceptionWithName:BBGenericError
@@ -171,3 +186,18 @@ unsigned int BBMusicAnalysisPitchClassDistance(unsigned int x, unsigned int y) {
 	int diff = abs(x-y);
 	return min( 12 - diff, diff );
 }
+
+
+ChordPitchClasses BBMusicAnalysisChordNameToChordPitchClasses(NSString* chord) {
+	int root_pitch = BBChordNameToPitchClass(chord);
+
+	ChordPitchClasses result;
+	result.pitch_classes[0] = root_pitch;
+	result.pitch_classes[1] = (root_pitch+4)%12;
+	result.pitch_classes[2] = (root_pitch+7)%12;
+	result.pitch_classes[3] = BBChordNameToAddedNotePitchClass(chord, root_pitch);
+	result.chord_size = (result.pitch_classes[3] == -1 ? 4 : 3);
+	
+	return result;
+}
+

@@ -18,28 +18,16 @@
  */
 
 -(BOOL) evalOnSequence:(BBSequence*) sequence forTime:(unsigned int) t {
-	
 	if(t==[sequence length]-1) return FALSE;
-	
 	NSString* target_label = [sequence labelAtTime:t];
-	int root_pitch = BBChordNameToPitchClass(target_label);
-	int degrees[] = { BBChordNameToPitchClass(target_label),
-		(root_pitch+4)%12,
-		(root_pitch+7)%12,
-		BBMusicAnalysisAddedAtTimeAV(sequence, t) };
-	
-	int num_degrees = degrees[3] != -1 ? 4 : 3;
-	
-	int i=0;
-	for( ; i<num_degrees; ++i ) {
-		if(!BBMusicAnalysisPitchIsPresent(sequence, t, degrees[i]) && 
-		    BBMusicAnalysisPitchIsPresent(sequence, t+1, degrees[i]) &&
-		    BBMusicAnalysisClosePitchIsPresentAV(sequence, t, degrees[i]))
-			return TRUE;
-	}
+	int number_of_notes_in_chord = ([target_label length] == 4 ? 4 : 3);
 	
 	
-	return FALSE;
+	int completing_pitch = BBMusicAnalysisPitchCompletingChordAV(sequence, t, target_label);
+	if( completing_pitch == -1 ) return FALSE;
+	
+	return BBMusicAnalysisClosePitchIsPresentAV(sequence, t, completing_pitch) &&
+	       BBNumberOfChordNotesAssertedInEventAV(target_label, sequence, t+1) == number_of_notes_in_chord;
 }
 
 

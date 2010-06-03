@@ -35,6 +35,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @class BBSequence;
 
+
+typedef struct {
+	int pitch_classes[4];
+	int chord_size;
+} ChordPitchClasses;
+
 extern NSString* BBMusicAnalysisNotesAttributeNames[12];
 extern NSString* BBMusicAnalysisMetricRelevanceAttributeName;
 extern NSString* BBMusicAnalysisRootFinderPredictionAttributeNames[5];
@@ -45,7 +51,6 @@ extern NSString* BBMajMode;
 extern NSString* BBMinMode;
 extern NSString* BBDimMode;
 
-
 extern NSString* BBMusicAnalysisInternalException;
 
 int BBChordNameToPitchClass(NSString* chordName);
@@ -54,9 +59,12 @@ int BBAddedNoteToPitchClass(unsigned int root_pitch, NSString* addedNote);
 
 NSString* BBChordNameToMode(NSString* chordName);
 NSString* BBChordNameToAddedNote(NSString* chordName);
+int BBChordNameToAddedNotePitchClass(NSString* chordName, int root_pitch);
 unsigned int BBNumberOfChordNotesAssertedInEvent(NSString* target_label, BBSequence* sequence, unsigned int t);
 
 BOOL BBAreChordsParallelTones(NSString* chord1, NSString* chord2);
 BOOL BBMusicAnalysisPitchIsPresent(BBSequence*, unsigned int, unsigned int p);
 NSString* BBMusicAnalysisValueForAttributeAtTime(BBSequence*, unsigned int time, NSString* attributeName);
 int BBMusicAnalysisBassPitchAtTime(BBSequence* sequence, unsigned int t);
+
+ChordPitchClasses BBMusicAnalysisChordNameToChordPitchClasses(NSString* chord);
