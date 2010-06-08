@@ -178,3 +178,26 @@ int BBMusicAnalysisPitchCountAV(BBSequence* sequence, unsigned int t, unsigned i
 	
 	return counter;	
 }
+
+
+int BBMusicAnalysisPitchTimeSpanAV(BBSequence* sequence, unsigned int t, int pitch) {
+	if( !BBMusicAnalysisPitchIsPresentAV(sequence, t, pitch) )
+		return 0;
+	
+	int window_size = 5;
+	int cur_len = [[sequence valueOfAttributeAtTime:t andPosition:2] intValue];
+	
+	int i;
+	int sequence_length = [sequence length];
+	BOOL terminated = FALSE;
+	
+	for(i=1; i<window_size && !terminated; ++i) {
+		if( t+i < sequence_length && BBMusicAnalysisPitchIsPresentAV(sequence, t+i, pitch) )
+			cur_len += [[sequence valueOfAttributeAtTime:t andPosition:2] intValue];
+		
+		if( t-i >= 0 && BBMusicAnalysisPitchIsPresentAV(sequence, t-i, pitch) )
+			cur_len += [[sequence valueOfAttributeAtTime:t andPosition:2] intValue];		
+	}
+	
+	return cur_len;
+}
