@@ -7,10 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <SeqLearning/BBFeature.h>
 
 
-@interface BBAsserted_assingNoteLastEvent : NSObject {
+@interface BBAssertedPassingNoteLastEventFeature : BBFeature {
 
 }
+
+-(BOOL) evalOnSequence:(BBSequence*) sequence forTime:(unsigned int) t;
 
 @end

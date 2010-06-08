@@ -1,5 +1,4 @@
 //
-//  BBAssertedéassingNoteLastEvent.m
 //  SeqLearning
 //
 //  Created by nadia senatore on 01/06/10.
@@ -10,8 +9,7 @@
 #import "BBMusicAnalysisWithAbsValues.h"
 
 
-@implementation BBAsserted_assingNoteLastEvent
-
+@implementation BBAssertedPassingNoteLastEventFeature
 
 /*
  Feature che restituisce TRUE se non è uno dei gradi dell'accordo y, ma è una nota vicina (congiunta) che è 
@@ -21,29 +19,15 @@
 
 -(BOOL) evalOnSequence:(BBSequence*) sequence forTime:(unsigned int) t {
 	if(t==0) return FALSE;
-//	
-//	NSString* target_label = [sequence labelAtTime:t];
-//	int root_pitch = BBChordNameToPitchClass(target_label);
-//	int degrees[] = { BBChordNameToPitchClass(target_label),
-//					  (root_pitch+4)%12,
-//					  (root_pitch+7)%12,
-//					  BBMusicAnalysisAddedAtTimeAV(sequence, t) };
-//	
-//	int i=0;
-//	for( ; i<3; ++i ) {
-//		if(!BBMusicAnalysisPitchIsPresent(sequence, t, degrees[i]) && 
-//			BBMusicAnalysisClosePitchIsPresentAV(sequence, t-1, degrees[i]) )
-//			return TRUE;
-//	}
-//	
-//
-//	if(degrees[3]!=-1 && 
-//	   !BBMusicAnalysisPitchIsPresent(sequence, t, degrees[3]) && 
-//	   BBMusicAnalysisClosePitchIsPresentAV(sequence, t-1, degrees[3]) )
-//		return TRUE;
-//	else
-//		return FALSE;
+	NSString* target_label = [sequence labelAtTime:t];
+	int number_of_notes_in_chord = ([target_label length] == 4 ? 4 : 3);
+	
+	
+	int completing_pitch = BBMusicAnalysisPitchCompletingChordAV(sequence, t, target_label);
+	if( completing_pitch == -1 ) return FALSE;
+	
+	return BBMusicAnalysisClosePitchIsPresentAV(sequence, t, completing_pitch) &&
+	BBNumberOfChordNotesAssertedInEventAV(target_label, sequence, t-1) == number_of_notes_in_chord;
 }
-
 
 @end
