@@ -39,6 +39,19 @@ NSString* BBDimMode=@"d";
     return -1;
 
 
+
+unsigned int majorModePitchClasses[] = { 0, 2, 4, 5, 7, 9, 11};
+unsigned int minorModePitchClasses[] = { 0, 2, 4, 5, 7, 9, 11};
+
+unsigned int* BBScalePitchClassesForChord(NSString* chord) {
+	NSString* mode = BBChordNameToMode(chord);
+	if(mode==BBMajMode) return majorModePitchClasses;
+	if(mode==BBMinMode) return minorModePitchClasses;
+	return NULL;
+}
+
+
+
 int BBNoteNameToPitchClass(NSString* noteName) {
 	static int firstCharToPitch[7] ={9,11,0,2,4,5,7}; /* from A to G */
 	int rootPitchNumber = firstCharToPitch[[noteName characterAtIndex:0]-'A'];

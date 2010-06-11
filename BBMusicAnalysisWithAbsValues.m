@@ -201,3 +201,25 @@ int BBMusicAnalysisPitchTimeSpanAV(BBSequence* sequence, unsigned int t, int pit
 	
 	return cur_len;
 }
+
+int BBMusicAnalysisEventSpanAV(BBSequence* sequence, unsigned int t, int pitch) {
+	if( !BBMusicAnalysisPitchIsPresentAV(sequence, t, pitch) )
+		return 0;
+	
+	int window_size = 5;
+	int cur_len = 1;
+	
+	unsigned int i;
+	int sequence_length = [sequence length];
+	
+	for(i=1; i<window_size; ++i) {
+		if( t+i < sequence_length && BBMusicAnalysisPitchIsPresentAV(sequence, t+i, pitch) )
+			++cur_len;
+		
+		if( t >= i && BBMusicAnalysisPitchIsPresentAV(sequence, t-i, pitch) )
+			++cur_len;		
+	}
+	
+	return cur_len;
+}
+

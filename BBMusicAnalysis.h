@@ -41,6 +41,10 @@ typedef struct {
 	int chord_size;
 } ChordPitchClasses;
 
+
+extern unsigned int majorModePitchClasses[];
+extern unsigned int minorModePitchClasses[];
+
 extern NSString* BBMusicAnalysisNotesAttributeNames[12];
 extern NSString* BBMusicAnalysisMetricRelevanceAttributeName;
 extern NSString* BBMusicAnalysisRootFinderPredictionAttributeNames[5];
@@ -56,6 +60,7 @@ extern NSString* BBMusicAnalysisInternalException;
 int BBChordNameToPitchClass(NSString* chordName);
 int BBNoteNameToPitchClass(NSString* noteName);
 int BBAddedNoteToPitchClass(unsigned int root_pitch, NSString* addedNote);
+unsigned int* BBScalePitchClassesForChord(NSString*);
 
 NSString* BBChordNameToMode(NSString* chordName);
 NSString* BBChordNameToAddedNote(NSString* chordName);

@@ -29,6 +29,7 @@
 #import <SeqLearning/BBRepetitionsOfAddedNoteFeature.h>
 #import <SeqLearning/BBAssertedPassingNoteNextEventFeature.h>
 #import <SeqLearning/BBAssertedPassingNoteLastEventFeature.h>
+#import <SeqLearning/BBPitchClassDurationFeature.h>
 
 @implementation BBMusicAnalysisWithAbsFeaturesManager
 
@@ -50,9 +51,26 @@
 	[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory++]
 									   forKey:[featureSet lastObject]];
 	
+	int i;
+	int j;
+	for(j=0; j<7; ++j){
+		for(i=1; i<=4; ++i) {
+		feature= [[[BBPitchClassDurationFeature alloc] init] autorelease];
+		[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:
+								[NSNumber numberWithInt:j],BBPitchClassDurationFeaturePitchClass, 
+								[NSNumber numberWithInt:i],BBPitchClassDurationFeatureNumRepetitions, 								
+								nil]]; 
+		[featureSet addObject:feature];		
+		[_featuresToMutexCategoryMapper setObject:[NSNumber numberWithInt:lastCategory]
+										   forKey:feature];
+		}
+		lastCategory++;
+	}	
+	
+	
 	
 	// asserted root note & third & fifth degree
-	int i;
+
 	for(i=0; i<4; ++i) {
 		feature= [[[BBRepetitionsOfRootNoteFeature alloc] init] autorelease];
 		[feature setParameters:[NSDictionary dictionaryWithObjectsAndKeys:

@@ -16,3 +16,4 @@ BOOL BBMusicAnalysisClosePitchIsPresentAV(BBSequence* sequence, unsigned int t, 
 
 int BBMusicAnalysisPitchCompletingChordAV(BBSequence* sequence, unsigned int t, NSString* chord);
 int BBMusicAnalysisPitchTimeSpanAV(BBSequence* sequence, unsigned int t, int pitch);
+int BBMusicAnalysisEventSpanAV(BBSequence* sequence, unsigned int t, int pitch);

@@ -40,4 +40,9 @@ NSString* BBRepetitionsOfAddedNoteFeatureKeyNum = @"Number";
 	}
 }
 
+-(unsigned int) orderOfMarkovianAssumption {
+	return 0;
+}
+
+
 @end
