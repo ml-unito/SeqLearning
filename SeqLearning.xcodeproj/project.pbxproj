@@ -20,6 +20,8 @@
 		DAD9707611A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD9707411A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.m */; };
 		DAE586B711B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE586B511B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.h */; };
 		DAE586B811B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE586B611B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.m */; };
+		DAF1248E11C409F700EB2588 /* BBPitchClassDurationFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF1248C11C409F700EB2588 /* BBPitchClassDurationFeature.h */; };
+		DAF1248F11C409F700EB2588 /* BBPitchClassDurationFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1248D11C409F700EB2588 /* BBPitchClassDurationFeature.m */; };
 		F818FECA0ECC533E00B154A1 /* SeqLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CB3D740A777175009B9DF3 /* SeqLearning.framework */; };
 		F81BDD5C0EEC4135004E4735 /* BBSimpleAttributeFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F81BDD5A0EEC4135004E4735 /* BBSimpleAttributeFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F81BDD5D0EEC4135004E4735 /* BBSimpleAttributeFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F81BDD5B0EEC4135004E4735 /* BBSimpleAttributeFeature.m */; };
@@ -193,6 +195,8 @@
 		DAD9707411A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRepetitionsOfFifthDegreeFeature.m; sourceTree = "<group>"; };
 		DAE586B511B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBAssertedPassingNoteLastEventFeature.h; sourceTree = "<group>"; };
 		DAE586B611B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBAssertedPassingNoteLastEventFeature.m; sourceTree = "<group>"; };
+		DAF1248C11C409F700EB2588 /* BBPitchClassDurationFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBPitchClassDurationFeature.h; path = /Users/nadiasenatore/Documents/SeqLearningNadia/BBPitchClassDurationFeature.h; sourceTree = "<absolute>"; };
+		DAF1248D11C409F700EB2588 /* BBPitchClassDurationFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBPitchClassDurationFeature.m; path = /Users/nadiasenatore/Documents/SeqLearningNadia/BBPitchClassDurationFeature.m; sourceTree = "<absolute>"; };
 		F808BBF71108C9800075E03D /* BBMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMatrix.h; sourceTree = "<group>"; };
 		F808BBF81108C9800075E03D /* BBMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMatrix.m; sourceTree = "<group>"; };
 		F80E1A831109FE7F005EFCEB /* BBObjectCacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBObjectCacher.h; sourceTree = "<group>"; };
@@ -637,6 +641,8 @@
 		F8A9186C11A690410003962F /* MusicAnalysisTesiNadia */ = {
 			isa = PBXGroup;
 			children = (
+				DAF1248C11C409F700EB2588 /* BBPitchClassDurationFeature.h */,
+				DAF1248D11C409F700EB2588 /* BBPitchClassDurationFeature.m */,
 				F8A9186F11A690D20003962F /* BBMusicAnalysisWithAbsValues.h */,
 				F8A9187011A690D20003962F /* BBMusicAnalysisWithAbsValues.m */,
 				F88E782711A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.h */,
@@ -768,6 +774,7 @@
 				DA03A7C511ABD6490048AB0F /* BBRepetitionsOfAddedNoteFeature.h in Headers */,
 				DA231FB511B0F2B1007ED478 /* BBAssertedPassingNoteNextEventFeature.h in Headers */,
 				DAE586B711B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.h in Headers */,
+				DAF1248E11C409F700EB2588 /* BBPitchClassDurationFeature.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,6 +971,7 @@
 				DA03A7C611ABD6490048AB0F /* BBRepetitionsOfAddedNoteFeature.m in Sources */,
 				DA231FB611B0F2B1007ED478 /* BBAssertedPassingNoteNextEventFeature.m in Sources */,
 				DAE586B811B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.m in Sources */,
+				DAF1248F11C409F700EB2588 /* BBPitchClassDurationFeature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
