@@ -13,7 +13,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Target_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					632,
+					671,
 					20,
 					48,
 					43,
@@ -30,8 +30,22 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 298057439;
-			PBXWorkspaceStateSaveDate = 298057439;
+			PBXPerProjectTemplateStateSaveDate = 306160504;
+			PBXWorkspaceStateSaveDate = 306160504;
+		};
+		perUserProjectItems = {
+			DA05AD44123FA356005F3CDC /* PBXTextBookmark */ = DA05AD44123FA356005F3CDC /* PBXTextBookmark */;
+			DA05AD45123FA356005F3CDC /* PBXTextBookmark */ = DA05AD45123FA356005F3CDC /* PBXTextBookmark */;
+			DA05AD46123FA356005F3CDC /* PBXTextBookmark */ = DA05AD46123FA356005F3CDC /* PBXTextBookmark */;
+			DA05AD47123FA356005F3CDC /* PBXTextBookmark */ = DA05AD47123FA356005F3CDC /* PBXTextBookmark */;
+			DA05AD48123FA356005F3CDC /* PBXTextBookmark */ = DA05AD48123FA356005F3CDC /* PBXTextBookmark */;
+			DA05AD49123FA356005F3CDC /* PBXTextBookmark */ = DA05AD49123FA356005F3CDC /* PBXTextBookmark */;
+			DA0844A0120821F30038DE1E /* PBXTextBookmark */ = DA0844A0120821F30038DE1E /* PBXTextBookmark */;
+			DA0FA38B123FA3960004072D /* PBXTextBookmark */ = DA0FA38B123FA3960004072D /* PBXTextBookmark */;
+			DA0FA39B123FA3960004072D /* PBXTextBookmark */ = DA0FA39B123FA3960004072D /* PBXTextBookmark */;
+			DA323CDB12364421008DC566 /* PBXTextBookmark */ = DA323CDB12364421008DC566 /* PBXTextBookmark */;
+			DA323CDC12364421008DC566 /* PBXTextBookmark */ = DA323CDC12364421008DC566 /* PBXTextBookmark */;
+			DA567AE911DBCEB100CAA340 /* PBXTextBookmark */ = DA567AE911DBCEB100CAA340 /* PBXTextBookmark */;
 		};
 		sourceControlManager = DA7B289611A5295000F26944 /* Source Control */;
 		userBuildSettings = {
@@ -65,6 +79,96 @@
 			sepNavVisRange = "{210, 1214}";
 		};
 	};
+	DA05AD44123FA356005F3CDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F8E78FBE0B0C7E9E007C6EAD /* BBMusicAnalysisErrorEvaluator.m */;
+		name = "BBMusicAnalysisErrorEvaluator.m: 40";
+		rLen = 0;
+		rLoc = 1635;
+		rType = 0;
+		vrLen = 1224;
+		vrLoc = 959;
+	};
+	DA05AD45123FA356005F3CDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F8DA34EF0A6FED1C0000D154 /* BBMusicAnalysisWithPitches.m */;
+		name = "BBMusicAnalysisWithPitches.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1134;
+		vrLoc = 2702;
+	};
+	DA05AD46123FA356005F3CDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F8A9186F11A690D20003962F /* BBMusicAnalysisWithAbsValues.h */;
+		name = "BBMusicAnalysisWithAbsValues.h: 17";
+		rLen = 0;
+		rLoc = 756;
+		rType = 0;
+		vrLen = 949;
+		vrLoc = 0;
+	};
+	DA05AD47123FA356005F3CDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F8DA34EE0A6FED1C0000D154 /* BBMusicAnalysis.h */;
+		name = "BBMusicAnalysis.h: 63";
+		rLen = 27;
+		rLoc = 2321;
+		rType = 0;
+		vrLen = 1551;
+		vrLoc = 1511;
+	};
+	DA05AD48123FA356005F3CDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F872A93B11A13DE800B893C0 /* BBMusicAnalysis.m */;
+		name = "BBMusicAnalysis.m: 44";
+		rLen = 0;
+		rLoc = 1818;
+		rType = 0;
+		vrLen = 1008;
+		vrLoc = 2166;
+	};
+	DA05AD49123FA356005F3CDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DAF1248D11C409F700EB2588 /* BBPitchClassDurationFeature.m */;
+		name = "BBPitchClassDurationFeature.m: 32";
+		rLen = 2;
+		rLoc = 1022;
+		rType = 0;
+		vrLen = 1108;
+		vrLoc = 56;
+	};
+	DA0844A0120821F30038DE1E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DAD9706111A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.m */;
+		name = "BBRepetitionsOfThirdDegreeFeature.m: 30";
+		rLen = 34;
+		rLoc = 700;
+		rType = 0;
+		vrLen = 521;
+		vrLoc = 214;
+	};
+	DA0FA38B123FA3960004072D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F8A9187011A690D20003962F /* BBMusicAnalysisWithAbsValues.m */;
+		name = "BBMusicAnalysisWithAbsValues.m: 209";
+		rLen = 1;
+		rLoc = 6273;
+		rType = 0;
+		vrLen = 1022;
+		vrLoc = 0;
+	};
+	DA0FA39B123FA3960004072D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F872A93B11A13DE800B893C0 /* BBMusicAnalysis.m */;
+		name = "BBMusicAnalysis.m: 44";
+		rLen = 0;
+		rLoc = 1818;
+		rType = 0;
+		vrLen = 1602;
+		vrLoc = 700;
+	};
 	DA231FB311B0F2B1007ED478 /* BBAssertedPassingNoteNextEventFeature.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {798, 418}}";
@@ -78,6 +182,36 @@
 			sepNavSelRange = "{687, 107}";
 			sepNavVisRange = "{168, 964}";
 		};
+	};
+	DA323CDB12364421008DC566 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DAE586B611B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.m */;
+		name = "BBAssertedPassingNoteLastEventFeature.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 804;
+		vrLoc = 276;
+	};
+	DA323CDC12364421008DC566 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F8E78FBD0B0C7E9E007C6EAD /* BBMusicAnalysisErrorEvaluator.h */;
+		name = "BBMusicAnalysisErrorEvaluator.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1192;
+		vrLoc = 0;
+	};
+	DA567AE911DBCEB100CAA340 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DAD9706011A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.h */;
+		name = "BBRepetitionsOfThirdDegreeFeature.h: 9";
+		rLen = 261;
+		rLoc = 168;
+		rType = 0;
+		vrLen = 429;
+		vrLoc = 0;
 	};
 	DA7B289611A5295000F26944 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -95,16 +229,16 @@
 	};
 	DAD9706011A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {903, 454}}";
+			sepNavIntBoundsRect = "{{0, 0}, {899, 286}}";
 			sepNavSelRange = "{168, 261}";
 			sepNavVisRange = "{0, 429}";
 		};
 	};
 	DAD9706111A8105700092F03 /* BBRepetitionsOfThirdDegreeFeature.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {903, 715}}";
+			sepNavIntBoundsRect = "{{0, 0}, {899, 650}}";
 			sepNavSelRange = "{700, 34}";
-			sepNavVisRange = "{0, 891}";
+			sepNavVisRange = "{214, 521}";
 		};
 	};
 	DAD9707311A81C9E00092F03 /* BBRepetitionsOfFifthDegreeFeature.h */ = {
@@ -130,9 +264,16 @@
 	};
 	DAE586B611B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {768, 611}}";
-			sepNavSelRange = "{1041, 69}";
-			sepNavVisRange = "{471, 655}";
+			sepNavIntBoundsRect = "{{0, 0}, {899, 442}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{276, 804}";
+		};
+	};
+	DAF1248D11C409F700EB2588 /* BBPitchClassDurationFeature.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {849, 598}}";
+			sepNavSelRange = "{1022, 2}";
+			sepNavVisRange = "{56, 1108}";
 		};
 	};
 	F824ACDC0A67CA3F006D8C94 /* BBSequence.m */ = {
@@ -182,9 +323,9 @@
 	};
 	F872A93B11A13DE800B893C0 /* BBMusicAnalysis.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1069, 2262}}";
-			sepNavSelRange = "{184, 0}";
-			sepNavVisRange = "{4728, 1043}";
+			sepNavIntBoundsRect = "{{0, 0}, {992, 2704}}";
+			sepNavSelRange = "{1818, 0}";
+			sepNavVisRange = "{700, 1602}";
 		};
 	};
 	F872A93D11A13EEA00B893C0 /* BBMusicAnalysisWithPitches.h */ = {
@@ -280,17 +421,17 @@
 	};
 	F8A9186F11A690D20003962F /* BBMusicAnalysisWithAbsValues.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {803, 393}}";
+			sepNavIntBoundsRect = "{{0, 0}, {849, 510}}";
 			sepNavSelRange = "{756, 0}";
-			sepNavVisRange = "{0, 756}";
+			sepNavVisRange = "{0, 949}";
 			sepNavWindowFrame = "{{15, 4}, {884, 774}}";
 		};
 	};
 	F8A9187011A690D20003962F /* BBMusicAnalysisWithAbsValues.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {943, 2054}}";
-			sepNavSelRange = "{3180, 106}";
-			sepNavVisRange = "{3023, 1287}";
+			sepNavIntBoundsRect = "{{0, 0}, {943, 2938}}";
+			sepNavSelRange = "{6273, 1}";
+			sepNavVisRange = "{0, 1022}";
 			sepNavWindowFrame = "{{15, 4}, {884, 774}}";
 		};
 	};
@@ -339,11 +480,18 @@
 			sepNavVisRange = "{2796, 1124}";
 		};
 	};
+	F8DA34EE0A6FED1C0000D154 /* BBMusicAnalysis.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {849, 975}}";
+			sepNavSelRange = "{2321, 27}";
+			sepNavVisRange = "{1511, 1551}";
+		};
+	};
 	F8DA34EF0A6FED1C0000D154 /* BBMusicAnalysisWithPitches.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1069, 3146}}";
+			sepNavIntBoundsRect = "{{0, 0}, {908, 1664}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{6265, 1240}";
+			sepNavVisRange = "{2702, 1134}";
 		};
 	};
 	F8DA34F00A6FED1C0000D154 /* BBRootFinderPredictionsFeature.h */ = {
@@ -400,6 +548,20 @@
 			sepNavIntBoundsRect = "{{0, 0}, {903, 923}}";
 			sepNavSelRange = "{2076, 0}";
 			sepNavVisRange = "{0, 1479}";
+		};
+	};
+	F8E78FBD0B0C7E9E007C6EAD /* BBMusicAnalysisErrorEvaluator.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {899, 514}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1192}";
+		};
+	};
+	F8E78FBE0B0C7E9E007C6EAD /* BBMusicAnalysisErrorEvaluator.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {899, 1417}}";
+			sepNavSelRange = "{1635, 0}";
+			sepNavVisRange = "{959, 1224}";
 		};
 	};
 	F8FDADFE0ADE9A070026F1BF /* BBFeaturesManager.m */ = {
