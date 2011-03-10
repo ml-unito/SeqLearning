@@ -21,7 +21,6 @@
 		DAE586B711B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE586B511B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.h */; };
 		DAE586B811B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE586B611B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.m */; };
 		DAF1248E11C409F700EB2588 /* BBPitchClassDurationFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF1248C11C409F700EB2588 /* BBPitchClassDurationFeature.h */; };
-		DAF1248F11C409F700EB2588 /* BBPitchClassDurationFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1248D11C409F700EB2588 /* BBPitchClassDurationFeature.m */; };
 		F818FECA0ECC533E00B154A1 /* SeqLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CB3D740A777175009B9DF3 /* SeqLearning.framework */; };
 		F81BDD5C0EEC4135004E4735 /* BBSimpleAttributeFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F81BDD5A0EEC4135004E4735 /* BBSimpleAttributeFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F81BDD5D0EEC4135004E4735 /* BBSimpleAttributeFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F81BDD5B0EEC4135004E4735 /* BBSimpleAttributeFeature.m */; };
@@ -73,6 +72,8 @@
 		F88E782A11A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F88E782811A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m */; };
 		F88E784511A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F88E784311A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h */; };
 		F88E784611A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F88E784411A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m */; };
+		F8947C1F1328E4CD003E1548 /* BBPitchClassDurationFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F8947C1D1328E4CD003E1548 /* BBPitchClassDurationFeature.h */; };
+		F8947C201328E4CD003E1548 /* BBPitchClassDurationFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F8947C1E1328E4CD003E1548 /* BBPitchClassDurationFeature.m */; };
 		F8A9187111A690D20003962F /* BBMusicAnalysisWithAbsValues.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A9186F11A690D20003962F /* BBMusicAnalysisWithAbsValues.h */; };
 		F8A9187211A690D20003962F /* BBMusicAnalysisWithAbsValues.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A9187011A690D20003962F /* BBMusicAnalysisWithAbsValues.m */; };
 		F8B93AC20C4CB35400B9A05B /* BBTextRecognitionFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F8B93ABE0C4CB35400B9A05B /* BBTextRecognitionFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -282,6 +283,8 @@
 		F88E782811A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRepetitionsOfRootNoteFeature.m; sourceTree = "<group>"; };
 		F88E784311A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMusicAnalysisWithAbsFeaturesManager.h; sourceTree = "<group>"; };
 		F88E784411A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMusicAnalysisWithAbsFeaturesManager.m; sourceTree = "<group>"; };
+		F8947C1D1328E4CD003E1548 /* BBPitchClassDurationFeature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBPitchClassDurationFeature.h; sourceTree = "<group>"; };
+		F8947C1E1328E4CD003E1548 /* BBPitchClassDurationFeature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBPitchClassDurationFeature.m; sourceTree = "<group>"; };
 		F89B43BA0A712638008BB54B /* BBHMPerceptron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHMPerceptron.h; sourceTree = "<group>"; };
 		F89B43BB0A712638008BB54B /* BBHMPerceptron.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHMPerceptron.m; sourceTree = "<group>"; };
 		F89B43D60A71274E008BB54B /* BBSequenceLearner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSequenceLearner.h; sourceTree = "<group>"; };
@@ -586,6 +589,8 @@
 				F8DA34EE0A6FED1C0000D154 /* BBMusicAnalysis.h */,
 				F872A93B11A13DE800B893C0 /* BBMusicAnalysis.m */,
 				F872A93D11A13EEA00B893C0 /* BBMusicAnalysisWithPitches.h */,
+				F8947C1D1328E4CD003E1548 /* BBPitchClassDurationFeature.h */,
+				F8947C1E1328E4CD003E1548 /* BBPitchClassDurationFeature.m */,
 				F8DA34EF0A6FED1C0000D154 /* BBMusicAnalysisWithPitches.m */,
 				F8FDADFF0ADE9A070026F1BF /* BBMusicAnalysisFeaturesManager.h */,
 				F8FDAE000ADE9A070026F1BF /* BBMusicAnalysisFeaturesManager.m */,
@@ -752,6 +757,7 @@
 				F81BDD600EEC4346004E4735 /* BBSimpleLabelTransitionFeature.h in Headers */,
 				F81BDD680EEC441E004E4735 /* BBSimpleFeaturesManager.h in Headers */,
 				F846A1A20EF7EE3A005129FA /* BBCarpeDiemClassifier.h in Headers */,
+				F8947C1F1328E4CD003E1548 /* BBPitchClassDurationFeature.h in Headers */,
 				F846A1DF0EF7F018005129FA /* BBVertOptimizedViterbiClassifier.h in Headers */,
 				F8386E280EFFD51900632C90 /* BBTFBSPredictionFeaturesManager.h in Headers */,
 				F8386E2C0EFFD5B300632C90 /* BBTFBSPredictionAAPosFeature.h in Headers */,
@@ -827,7 +833,11 @@
 			isa = PBXProject;
 			buildConfigurationList = F824ACAF0A67C99E006D8C94 /* Build configuration list for PBXProject "SeqLearning" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* SeqLearningNew */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -899,6 +909,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8947C201328E4CD003E1548 /* BBPitchClassDurationFeature.m in Sources */,
 				F8DAC4130A82034700B574C7 /* BBCompletelyStatedChordFeature.m in Sources */,
 				F8CB3D920A7771DE009B9DF3 /* BBAssertedNotesOfChordFeature.m in Sources */,
 				F8DAC2EC0A80F4B900B574C7 /* BBAssertedAddedNoteFeature.m in Sources */,
@@ -971,7 +982,6 @@
 				DA03A7C611ABD6490048AB0F /* BBRepetitionsOfAddedNoteFeature.m in Sources */,
 				DA231FB611B0F2B1007ED478 /* BBAssertedPassingNoteNextEventFeature.m in Sources */,
 				DAE586B811B4E6770061699D /* BBAssertedPassingNoteLastEventFeature.m in Sources */,
-				DAF1248F11C409F700EB2588 /* BBPitchClassDurationFeature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,7 +1013,7 @@
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx10.5;
 			};
 			name = Debug;
 		};
@@ -1020,7 +1030,7 @@
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx10.5;
 				YACC_GENERATE_DEBUGGING_DIRECTIVES = YES;
 			};
 			name = Release;
@@ -1031,7 +1041,7 @@
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx10.5;
 			};
 			name = Default;
 		};
@@ -1057,6 +1067,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Tests;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -1082,6 +1093,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Tests;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
 			};
@@ -1106,6 +1118,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Tests;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Default;
@@ -1113,6 +1126,8 @@
 		F8CB3D800A77718F009B9DF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1134,6 +1149,7 @@
 				OTHER_REZFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = SeqLearning;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1146,10 +1162,8 @@
 		F8CB3D810A77718F009B9DF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1176,6 +1190,7 @@
 				OTHER_REZFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = SeqLearning;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1189,6 +1204,8 @@
 		F8CB3D820A77718F009B9DF3 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -1209,6 +1226,7 @@
 				OTHER_REZFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = SeqLearning;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",

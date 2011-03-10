@@ -77,7 +77,7 @@ FILE* files[255];
 	NSString* key;
 
 	NSMutableString* featureDes = [NSMutableString stringWithString:@"/Users/esposito/tmp/experiments/data/"]; 
-	[featureDes appendFormat:[feature className]];
+	[featureDes appendString:[feature className]];
 	while( key = [keys nextObject] ) {
 		if( [parameters objectForKey:key] == nil )
 			[featureDes appendFormat:@"_%@_", key];			

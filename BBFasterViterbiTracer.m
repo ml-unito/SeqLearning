@@ -36,7 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # pragma mark CONSTRUCTORS AND DESTRUCTORS
 
 -(id) initForTime:(unsigned int) t andNumLabels:(unsigned int) nlabels {
-	if( self=[super init] ) {
+	if( (self=[super init]) ) {
 		_t = t;
 		_nlabels = nlabels; 
 		_nodesStatusForTime = [[NSMutableArray alloc] initWithCapacity:t];
@@ -160,7 +160,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 @implementation BBFasterViterbiTracer
 
 -(id) initWithClassifier:(BBCarpeDiemClassifier*) classifier {
-	if(self=[super init]) {
+	if((self=[super init])) {
 		_classifier = [classifier retain];
 		_executionTrace = [[NSMutableArray alloc] initWithCapacity:200];				
 	}

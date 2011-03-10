@@ -48,7 +48,7 @@ typedef struct  {
 } SortInfo;
 
 
-int verticalWeightSort(id label1, id label2, void *context) {
+NSInteger verticalWeightSort(id label1, id label2, void *context) {
 	SortInfo* sortInfo = (SortInfo*) context;
 	unsigned int firstIndex = [[sortInfo->labelsToIndexes objectForKey:label1] intValue];
 	unsigned int secondIndex= [[sortInfo->labelsToIndexes objectForKey:label2] intValue];
@@ -182,7 +182,7 @@ void dumpNodesInfoStatus(NodesInfo* nodesInfo, int t_end) {
 #pragma mark CONSTRUCTOR AND DESTRUCTOR
 
 -(id) init {
-	if( self=[super init] ) {
+	if( (self=[super init]) ) {
 		_verticalWeights = nil;
 		_verticalFeatures = nil;
 		_horizontalWeights = nil;
@@ -495,7 +495,7 @@ void dumpNodesInfoStatus(NodesInfo* nodesInfo, int t_end) {
 	NSNumber* weight;
 	double totScore = 0.0;
 	
-	while( weight = [catEnumerator nextObject] ) {
+	while( (weight = [catEnumerator nextObject]) ) {
 		totScore += [weight doubleValue];
 	}
 	
@@ -882,7 +882,7 @@ return cur_rank_index;
 
 - (id)initWithCoder:(NSCoder *)coder {
 	
-    if(self = [self init]) {
+    if((self = [self init])) {
 		NSArray* features = [coder decodeObjectForKey:@"features"];
 		NSMutableArray* weights = [coder decodeObjectForKey:@"weights"];
 		BBFeaturesManager* manager = [coder decodeObjectForKey:@"featuresManager"];
