@@ -96,7 +96,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	for(t=0; t<=[self time]; ++t) {
 		NSAssert( [_nodesStatusForTime count]==([self time]+1),
 				  @"Internal error: erroneous number of objects in _nodesStatusForTime" );
-		NSAssert( [[_nodesStatusForTime objectAtIndex:t] count]==_nlabels,
+		NSAssert( [(NSMutableArray*)[_nodesStatusForTime objectAtIndex:t] count]==_nlabels,
 				  ([NSString stringWithFormat:@"Internal error: erroneous number of objects in _nodesStatusForTime at time step:%d",t]) );		
 		int n;		
 		for( n=0; n<_nlabels; ++n) {

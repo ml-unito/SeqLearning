@@ -24,41 +24,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
 #import "BBChordAgreementWithNextAccentedEventFeature.h"
+#import "BBExceptions.h"
 
 
 @implementation BBChordAgreementWithNextAccentedEventFeature
 
-//-(BOOL) evalOnSequence:(BBSequence*) sequence forTime:(unsigned int) t {
-//	int sequenceLenght = [sequence length];
-//	if( !(t<sequenceLenght) )
-//		return NO;
-//
-//	NSString* target_label = [sequence labelAtTime:t];
-//	int numAssertedNotes = 
-//		BBNumberOfChordNotesAssertedInEvent(target_label,sequence,t);
-//	
-//	NSString* noteName = BBMusicAnalysisNotesAttributeNames[BBChordNameToPitchClass(target_label)];
-//	int rootNoteAsserted = [[sequence valueOfAttributeAtTime: t named:noteName] isEqualToString:@"YES"];
-//		
-//	if( numAssertedNotes>=3 )
-//		return NO;
-//	
-//	if( numAssertedNotes==2 && rootNoteAsserted )
-//		return NO;
-//
-//	int nextAccentedEvent;
-//	
-//	BOOL found=NO;
-//	for( nextAccentedEvent=t; 
-//		 nextAccentedEvent<sequenceLenght && !found; 
-//		 ++nextAccentedEvent ) {
-//		found = [[sequence valueOfAttributeAtTime:nextAccentedEvent
-//											named:BBMusicAnalysisMetricRelevanceAttributeName] intValue] >= 3;
-//		
-//	}
-//
-//	
-//	
-//}
+-(BOOL) evalOnSequence:(BBSequence*) sequence forTime:(unsigned int) t {
+    @throw [NSException exceptionWithName:BBGenericError reason:@"Not yet implemented" userInfo:nil];   
+}
 
 @end

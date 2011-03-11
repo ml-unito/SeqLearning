@@ -75,8 +75,10 @@ NSString* BBChordChangeOnMetricalPatternFeatureKeyPattern = @"Pattern";
 	
 	int i;
 	for( i=0; i<3; ++i ) {
+        
 		if(metric_pattern[i]!=[target_metrical_pattern characterAtIndex:i])
-			return FALSE;
+		
+            return FALSE;
 	}
 
 	return TRUE;	
