@@ -133,8 +133,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			int i;
 			NSMutableArray* decodedFields = [[NSMutableArray alloc] init];
 			for(i=0; i<[_readers count]; ++i) {
-				id attribute = [[_readers objectAtIndex:i] 
-					readAttributeFromString:[fields objectAtIndex:i]];
+                id attribute = nil;
+                @try {
+                    attribute = [[_readers objectAtIndex:i] 
+                                    readAttributeFromString:[fields objectAtIndex:i]];
+                }
+                @catch (NSException *exception) {
+                    @throw [NSException exceptionWithName: BBAttributeReadingException 
+                                                   reason:[NSString stringWithFormat:@"Error on line:%@\n%@", line, [exception reason]] 
+                                                 userInfo:nil];
+                }
 				
 				// saving sequence_id if this is we need to check for it 
 				// (i.e., if sequence_id_pos!=-1) and we did not saved it yet
