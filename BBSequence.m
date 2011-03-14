@@ -205,14 +205,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 }
 
 
-- (id) copyWithZone:(NSZone *)zone {
+- (id) mutableCopyWithZone:(NSZone *)zone {
     BBSequence* sequence = [[BBSequence allocWithZone:zone] init];
     
-    sequence->_attribute_descriptions = [self->_attribute_descriptions copyWithZone:zone];
+    sequence->_attribute_descriptions = [self->_attribute_descriptions mutableCopyWithZone:zone];
 	sequence->_label_pos = self->_label_pos;
 	sequence->_idAttribute_pos = self->_idAttribute_pos;
-	sequence->_events = [self->_events copyWithZone:zone];
-	sequence->_tmp_labels = [self->_tmp_labels copyWithZone:zone];
+	sequence->_events = [self->_events mutableCopyWithZone:zone];
+	sequence->_tmp_labels = [self->_tmp_labels mutableCopyWithZone:zone];
     
     return sequence;
 }

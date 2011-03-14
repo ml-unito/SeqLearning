@@ -31,7 +31,7 @@ NSString* BBSeqSetDidChangeNotification=@"BBSeqSetDidChangeNotification";
 @implementation BBSeqSet
 
 -(id)init {
-	if(self=[super init]) {
+	if((self=[super init])) {
 		_ss = [[NSMutableArray alloc] init];
 		_preferredFeaturesManagerClassName = nil;
 	}
@@ -79,7 +79,7 @@ NSString* BBSeqSetDidChangeNotification=@"BBSeqSetDidChangeNotification";
     NSEnumerator* enumerator = [seqSet sequenceEnumerator];
     BBSequence* sequence;
     while( (sequence = [enumerator nextObject]) ) {
-        [self appendSequence: [sequence copy]];
+        [self appendSequence: [sequence mutableCopy]];
     }
 }
 
@@ -101,7 +101,7 @@ NSString* BBSeqSetDidChangeNotification=@"BBSeqSetDidChangeNotification";
 	BBSequence* sequence;
 	
 	unsigned int cur_t=0;
-	while( sequence = [enumerator nextObject] ) {
+	while( (sequence = [enumerator nextObject]) ) {
 		if(cur_t+[sequence length]-1>=t) {
 			return [sequence valueOfAttributeAtTime:t-cur_t andPosition:pos];  
 		} else 
@@ -120,7 +120,7 @@ NSString* BBSeqSetDidChangeNotification=@"BBSeqSetDidChangeNotification";
 	BBSequence* sequence;
 
 	unsigned int cur_t=0;
-	while( sequence = [enumerator nextObject] ) {
+	while( (sequence = [enumerator nextObject]) ) {
 		if(cur_t+[sequence length]-1>=t) {
 			return [sequence valueOfAttributeAtTime:t-cur_t named:attributeName];  
 		} else 
@@ -210,7 +210,7 @@ NSString* BBSeqSetDidChangeNotification=@"BBSeqSetDidChangeNotification";
 
 // NSCoding
 - (id)initWithCoder:(NSCoder *)coder {
-	if( self = [super init] ) {
+	if( (self = [super init]) ) {
 		_ss = [[coder decodeObjectForKey:@"ss"] retain];
 	}
 	
