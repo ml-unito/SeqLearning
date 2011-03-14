@@ -54,7 +54,7 @@ FILE* files[255];
 @implementation BBHMPerceptron
 
 -(id) init {
-	if( self=[super init] ) {
+	if( (self=[super init]) ) {
 		[_options setObject: [NSNumber numberWithInt:20] 
 					 forKey:BBHMPerceptronNumberOfIterationsOption];
 		[_options setObject: @"BBCarpeDiemClassifier"
@@ -78,7 +78,7 @@ FILE* files[255];
 
 	NSMutableString* featureDes = [NSMutableString stringWithString:@"/Users/esposito/tmp/experiments/data/"]; 
 	[featureDes appendString:[feature className]];
-	while( key = [keys nextObject] ) {
+	while( (key = [keys nextObject]) ) {
 		if( [parameters objectForKey:key] == nil )
 			[featureDes appendFormat:@"_%@_", key];			
 		else
@@ -254,7 +254,7 @@ FILE* files[255];
 		NSEnumerator* sequenceEnumerator = [ss sequenceEnumerator];
 		BBSequence* sequence;
 		seq_num=0;
-		while( sequence=[sequenceEnumerator nextObject] ) {
+		while( (sequence=[sequenceEnumerator nextObject]) ) {
 #if SAVE_DEBUG_DATA
 			// TO BE DELETED
 			num_sequence = seq_num;

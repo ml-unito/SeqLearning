@@ -26,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #import <Cocoa/Cocoa.h>
 #import <SeqLearning/BBAttributeDescription.h>
 
-@interface BBSequence : NSObject <NSCoding> {
+@interface BBSequence : NSObject <NSCoding, NSCopying> {
 	NSDictionary* _attribute_descriptions;
 	int _label_pos;
 	int _idAttribute_pos;
@@ -74,5 +74,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 - (id)initWithCoder:(NSCoder *)coder;
 - (void)encodeWithCoder:(NSCoder *)encoder;
 
+    // NSCopying
+-(id) copyWithZone:(NSZone *)zone;
 
 @end

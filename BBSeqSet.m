@@ -75,6 +75,15 @@ NSString* BBSeqSetDidChangeNotification=@"BBSeqSetDidChangeNotification";
 }
 
 
+-(void) appendCopyOfSequencesFromSeqSet:(BBSeqSet *)seqSet {
+    NSEnumerator* enumerator = [seqSet sequenceEnumerator];
+    BBSequence* sequence;
+    while( (sequence = [enumerator nextObject]) ) {
+        [self appendSequence: [sequence copy]];
+    }
+}
+
+
 -(void) insertSequence:(BBSequence*) sequence atIndex:(int) index {
 	[_ss insertObject:sequence atIndex:index];
 	[[NSNotificationCenter defaultCenter] postNotificationName:BBSeqSetDidChangeNotification

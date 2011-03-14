@@ -30,7 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 @implementation BBSequence
 
 -(id) init {
-	if(self=[super init]) {
+	if((self=[super init])) {
 		_events = [[NSMutableArray alloc] init];
 		_attribute_descriptions = nil;
 		_label_pos = -1;
@@ -186,7 +186,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // NSCoding
 - (id)initWithCoder:(NSCoder *)coder {
-	if( self = [super init] ) {
+	if( (self = [super init]) ) {
 		_attribute_descriptions = [[coder decodeObjectForKey:@"attribute_descriptions"] retain];
 		_label_pos = [coder decodeIntForKey:@"label_pos"];
 		_idAttribute_pos = [coder decodeIntForKey:@"idAttribute_pos"];
@@ -205,5 +205,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 }
 
 
+- (id) copyWithZone:(NSZone *)zone {
+    BBSequence* sequence = [[BBSequence allocWithZone:zone] init];
+    
+    sequence->_attribute_descriptions = [self->_attribute_descriptions copyWithZone:zone];
+	sequence->_label_pos = self->_label_pos;
+	sequence->_idAttribute_pos = self->_idAttribute_pos;
+	sequence->_events = [self->_events copyWithZone:zone];
+	sequence->_tmp_labels = [self->_tmp_labels copyWithZone:zone];
+    
+    return sequence;
+}
 
 @end

@@ -41,6 +41,7 @@ extern NSString* BBSeqSetDidChangeNotification;
 -(NSEnumerator*) sequenceEnumerator;
 -(void) appendSequence:(BBSequence*) sequence;
 -(void) appendSequencesFromSeqSet:(BBSeqSet*) seqSet;
+-(void) appendCopyOfSequencesFromSeqSet:(BBSeqSet*) seqSet;
 -(void) insertSequence:(BBSequence*) sequence atIndex:(int) index;
 
 -(void) removeSequenceNumber:(unsigned int) t;
