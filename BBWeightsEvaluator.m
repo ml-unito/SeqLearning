@@ -39,7 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		   vertWeights:(NSArray*) vW 
 		  horizWeights:(NSArray*) hW {
 	
-	if( self=[super init] ) {
+	if( (self=[super init]) ) {
 		_sequence = [s retain];
 		
 		_verticalFeatures = [vFeat retain];
@@ -151,7 +151,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	NSNumber* weight;
 	double totScore = 0.0;
 	
-	while( weight = [catEnumerator nextObject] ) {
+	while( (weight = [catEnumerator nextObject]) ) {
 		totScore += [weight doubleValue];
 	}
 	

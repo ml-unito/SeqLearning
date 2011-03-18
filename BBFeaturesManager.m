@@ -48,7 +48,7 @@ static BBFeaturesManager* _defaultManager = nil;
 
 
 -(id) initWithDataSet:(BBSeqSet*) dataset {
-	if( self=[super init] ) {
+	if( (self=[super init]) ) {
 		[self setFeaturesToMutexCategoryMapper:[NSMutableDictionary dictionaryWithCapacity:100]];
 		[self setFeatures:[self initFeaturesUsingDataSet:dataset]];
 		[self setOptions: [NSMutableDictionary dictionary]];
@@ -103,7 +103,7 @@ static BBFeaturesManager* _defaultManager = nil;
 
 - (id)initWithCoder:(NSCoder *)coder {
 	
-    if(self = [super init]) {
+    if((self = [super init])) {
 		NSMutableArray* features = [coder decodeObjectForKey:@"features"];
 		NSMutableDictionary* mapper = [coder decodeObjectForKey:@"featuresToMutexCategoryMapper"];
 		NSMutableDictionary* options = [coder decodeObjectForKey:@"options"];

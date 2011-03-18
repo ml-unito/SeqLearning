@@ -66,7 +66,7 @@ NSString* BBTFBSPredictionAAPosFeatureNPosKey = @"NPos";
 
 - (id)initWithCoder:(NSCoder *)coder {
 	
-    if(self = [super initWithCoder:coder]) {
+    if((self = [super initWithCoder:coder])) {
 		num_aa_attributes = [coder decodeIntForKey:@"num_aa_attr"];
 	}
 	

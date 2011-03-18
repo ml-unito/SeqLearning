@@ -44,7 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma mark ALLOC/DEALLOC AND ACCESSORS
 
 -(id)init {
-	if( self=[super init] ) {
+	if( (self=[super init]) ) {
 		_path = [[NSMutableArray array] retain];
 		_accumulatedWeight = 0;
 	}

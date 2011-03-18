@@ -34,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 }
 
 -(id) initWithKeys:(NSSet*) keys {
-	if( self = [super init] ) {
+	if( (self = [super init]) ) {
 		_keys = [keys retain];
 	}
 	

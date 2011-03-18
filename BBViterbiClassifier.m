@@ -438,7 +438,7 @@ skip_nil_features_is_enabled(void) {
 
 - (id)initWithCoder:(NSCoder *)coder {
 	
-    if(self = [self init]) {
+    if((self = [self init])) {
 		NSArray* features = [coder decodeObjectForKey:@"features"];
 		NSMutableArray* weights = [coder decodeObjectForKey:@"weights"];
 		[self setFeatures:features];

@@ -71,7 +71,7 @@ static BOOL bb_music_labels_differ( NSString* predicted, NSString* correct ) {
 				 nil];
 	
 	
-	while( sequence = [seq_enumerator nextObject] ) {
+	while( (sequence = [seq_enumerator nextObject]) ) {
 		int seq_len = [sequence length];
 		predictions_count+=seq_len;
 		

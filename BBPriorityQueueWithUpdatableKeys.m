@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 -(id) initWithOrder:(BBPriorityQueueOrder) order {
 	
-	if(self = [super init]) {
+	if((self = [super init])) {
 		if(!(_queue = [[NSMutableArray alloc] init]))
 			return nil;
 		

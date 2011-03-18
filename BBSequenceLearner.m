@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 @implementation BBSequenceLearner
 
 -(id)init {
-	if( self = [super init] ) {
+	if( (self = [super init]) ) {
 		_options = [[NSMutableDictionary alloc] init];		
 	}
 	

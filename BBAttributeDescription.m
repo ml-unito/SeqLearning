@@ -47,7 +47,7 @@ BBAttributeType	BBAttributeTypeNominal= @"Nominal";
 -(id)initWithType:(BBAttributeType) type 
 		 position:(unsigned int) pos
 		  andInfo:(NSObject*) info {
-	if( self=[super init] ) {
+	if( (self=[super init]) ) {
 		_type = type;
 		_position = pos;
 		if( info!=nil )
@@ -96,7 +96,7 @@ BBAttributeType	BBAttributeTypeNominal= @"Nominal";
 
 - (id)initWithCoder:(NSCoder *)coder {
 	
-    if(self = [super init]) {
+    if((self = [super init])) {
 		_position = [coder decodeIntForKey:@"position"];
 		_type = [[coder decodeObjectForKey:@"type"] retain];
 		_info = [[coder decodeObjectForKey:@"info"] retain];	

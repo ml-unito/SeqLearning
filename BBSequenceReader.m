@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 @implementation BBSequenceReader
 
 -(id) init {
-	if( self = [super init] ) {
+	if( (self = [super init]) ) {
 		BBFieldsDelimiterString = @" ";
 		BBLinesDelimiterString = @"\n";
 		BBCommentMarkerString = @"#";
@@ -88,7 +88,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 	NSEnumerator* it = [_attribute_descriptions objectEnumerator];
 	BBAttributeDescription* current;
-	while( current=[it nextObject] ) {
+	while( (current=[it nextObject]) ) {
 		[readers replaceObjectAtIndex:[current position] 
 						   withObject:[current reader]];
 	}

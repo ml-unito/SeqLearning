@@ -33,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 }
 
 -(id) initWithDouble:(double) value {
-	if(self=[super init]) {
+	if((self=[super init])) {
 		_value=value;		
 	}
 
@@ -63,7 +63,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 - (id)initWithCoder:(NSCoder *)coder {
 	
-    if(self = [super init]) {
+    if((self = [super init])) {
 		[self setDouble:[coder decodeDoubleForKey:@"value"]];
 	}
 	

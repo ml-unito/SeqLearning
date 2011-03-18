@@ -55,7 +55,7 @@
 	NSEnumerator* link_enumerator = [link_names objectEnumerator];
 	NSString* link_name;
 	int pos = 0;
-	while( link_name = [link_enumerator nextObject] ) {
+	while( (link_name = [link_enumerator nextObject]) ) {
 		links[pos] = (char*) malloc(sizeof(char[5]));
 		[link_name getCString: links[pos]
 					maxLength: 5

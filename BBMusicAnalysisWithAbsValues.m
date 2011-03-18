@@ -187,7 +187,7 @@ int BBMusicAnalysisPitchTimeSpanAV(BBSequence* sequence, unsigned int t, int pit
 	int window_size = 5;
 	int cur_len = [[sequence valueOfAttributeAtTime:t andPosition:2] intValue];
 	
-	int i;
+	unsigned int i;
 	int sequence_length = [sequence length];
 	BOOL terminated = FALSE;
 	
@@ -195,7 +195,7 @@ int BBMusicAnalysisPitchTimeSpanAV(BBSequence* sequence, unsigned int t, int pit
 		if( t+i < sequence_length && BBMusicAnalysisPitchIsPresentAV(sequence, t+i, pitch) )
 			cur_len += [[sequence valueOfAttributeAtTime:t andPosition:2] intValue];
 		
-		if( t-i >= 0 && BBMusicAnalysisPitchIsPresentAV(sequence, t-i, pitch) )
+		if( t >= i && BBMusicAnalysisPitchIsPresentAV(sequence, t-i, pitch) )
 			cur_len += [[sequence valueOfAttributeAtTime:t andPosition:2] intValue];		
 	}
 	

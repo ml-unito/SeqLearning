@@ -30,7 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 @implementation BBFeature
 
 -(id)init {
-	if( self=[super init] ) {
+	if( (self=[super init]) ) {
 		_parameters=nil;
 	}
 	
@@ -73,7 +73,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	NSArray* parametersArray = [parametersDescription componentsSeparatedByString:@","];
 	NSEnumerator* paramEnumerator = [parametersArray objectEnumerator];
 	NSString* singleParamDescription;
-	while( singleParamDescription = [paramEnumerator nextObject] ) {
+	while( (singleParamDescription = [paramEnumerator nextObject]) ) {
 		NSArray* keyValuePair = [singleParamDescription componentsSeparatedByString:@"="];
 		if( [keyValuePair count]!=2 ) {
 			@throw [NSException exceptionWithName:BBGenericError
@@ -95,7 +95,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	NSEnumerator* keyEnumerator = [_parameters keyEnumerator];
 	NSString* key;
 	BOOL first=TRUE;
-	while(key=[keyEnumerator nextObject]) {
+	while((key=[keyEnumerator nextObject])) {
 		if(first) {
 			first=FALSE;
 		} else {
@@ -111,7 +111,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // NSCoding
 - (id)initWithCoder:(NSCoder *)coder {
-	if( self = [super init] ) {
+	if( (self = [super init]) ) {
 		_parameters = [[coder decodeObjectForKey:@"parameters"] retain];
 	}
 	

@@ -30,7 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 -(id)init {
-	if( self = [super init] ) {
+	if( (self = [super init]) ) {
 		BBFieldsDelimiterString=@",";
 		BBCommentMarkerString=@"%";
 		_knownDescriptions = nil;
@@ -193,7 +193,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	NSEnumerator* attributesEnumerator = [attributesDefinitions objectEnumerator];
 	NSString* attributeDefinition;
 	int n=0;
-	while( attributeDefinition = [attributesEnumerator nextObject] ) {
+	while( (attributeDefinition = [attributesEnumerator nextObject]) ) {
 		if(![attributeDefinition isEqualToString:@""]) {
 			if([self parseAttributeDefinitionNumber:n fromString:attributeDefinition])
 				++n;			

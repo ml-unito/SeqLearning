@@ -40,7 +40,7 @@ typedef int** LabelsSelection;
 @implementation BBViterbiBeamSearchClassifier
 
 -(id) init {
-	if( self=[super init] ) {
+	if( (self=[super init]) ) {
 		_beamSize = 0.1;
 		_optimizeVerticalWeights = FALSE;
 	}

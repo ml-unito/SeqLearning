@@ -42,7 +42,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	NSEnumerator* seq_enumerator = [ss sequenceEnumerator];
 	BBSequence* sequence;
 	
-	while( sequence = [seq_enumerator nextObject] ) {
+	while( (sequence = [seq_enumerator nextObject]) ) {
 		int seq_len = [sequence length];
 		predictions_count+=seq_len;
 		
