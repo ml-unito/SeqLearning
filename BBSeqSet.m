@@ -221,5 +221,12 @@ NSString* BBSeqSetDidChangeNotification=@"BBSeqSetDidChangeNotification";
 }
 
 
+// NSFastEnumeration
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state 
+                                  objects:(id *)stackbuf 
+                                    count:(NSUInteger)len {
+    return [_ss countByEnumeratingWithState:state objects:stackbuf count:len];
+}
+
 
 @end

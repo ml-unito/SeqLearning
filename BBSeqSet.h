@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 extern NSString* BBSeqSetDidChangeNotification;
 
-@interface BBSeqSet : NSObject <NSCoding> {
+@interface BBSeqSet : NSObject <NSCoding, NSFastEnumeration> {
 	NSMutableArray* _ss;
 	NSString* _preferredFeaturesManagerClassName;
 }
@@ -104,5 +104,8 @@ extern NSString* BBSeqSetDidChangeNotification;
 - (id)initWithCoder:(NSCoder *)coder;
 - (void)encodeWithCoder:(NSCoder *)encoder;
 
-
+// NSFastEnumeration
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state 
+                                  objects:(id *)stackbuf 
+                                    count:(NSUInteger)len;
 @end

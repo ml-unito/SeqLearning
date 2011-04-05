@@ -69,7 +69,7 @@
 		F88457410AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F884573F0AF62E990029328E /* BBChordAgreementWithNextAccentedEventFeature.m */; };
 		F88E782911A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F88E782711A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.h */; };
 		F88E782A11A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F88E782811A6CD52009536E3 /* BBRepetitionsOfRootNoteFeature.m */; };
-		F88E784511A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F88E784311A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h */; };
+		F88E784511A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F88E784311A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F88E784611A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F88E784411A6D164009536E3 /* BBMusicAnalysisWithAbsFeaturesManager.m */; };
 		F8947C1F1328E4CD003E1548 /* BBPitchClassDurationFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = F8947C1D1328E4CD003E1548 /* BBPitchClassDurationFeature.h */; };
 		F8947C201328E4CD003E1548 /* BBPitchClassDurationFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = F8947C1E1328E4CD003E1548 /* BBPitchClassDurationFeature.m */; };
@@ -1004,28 +1004,33 @@
 		F824ACB00A67C99E006D8C94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ARCHS = "$(ONLY_ACTIVE_ARCH_PRE_XCODE_3_1)";
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				SDKROOT = macosx10.5;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				ONLY_ACTIVE_ARCH_PRE_XCODE_3_1 = "$(NATIVE_ARCH_64)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		F824ACB10A67C99E006D8C94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_64_BIT_PRE_XCODE_3_1 = x86_64;
+				ARCHS = "$(ONLY_ACTIVE_ARCH_PRE_XCODE_3_1)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DEBUGGING_SYMBOLS = full;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				SDKROOT = macosx10.5;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				ONLY_ACTIVE_ARCH_PRE_XCODE_3_1 = "$(NATIVE_ARCH_64)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				VALID_ARCHS = x86_64;
 				YACC_GENERATE_DEBUGGING_DIRECTIVES = YES;
 			};
 			name = Release;
@@ -1033,11 +1038,15 @@
 		F824ACB20A67C99E006D8C94 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ONLY_ACTIVE_ARCH_PRE_XCODE_3_1)";
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				SDKROOT = macosx10.5;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				ONLY_ACTIVE_ARCH_PRE_XCODE_3_1 = "$(NATIVE_ARCH_64)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				VALID_ARCHS = x86_64;
 			};
 			name = Default;
 		};
