@@ -55,8 +55,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 -(void) dealloc {
 	if(_path) [_path release];
-	if(self.label) [self.label release];
-	if(self.eval) [self.eval release];
+	if(self.label) [label release];
+	if(self.eval) [eval release];
 	[super dealloc];
 }
 

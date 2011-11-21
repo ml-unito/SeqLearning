@@ -79,7 +79,7 @@ NSString* BBSeqSetDidChangeNotification=@"BBSeqSetDidChangeNotification";
     NSEnumerator* enumerator = [seqSet sequenceEnumerator];
     BBSequence* sequence;
     while( (sequence = [enumerator nextObject]) ) {
-        [self appendSequence: [sequence mutableCopy]];
+        [self appendSequence: [[sequence mutableCopy] autorelease]];
     }
 }
 
