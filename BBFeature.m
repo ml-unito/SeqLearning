@@ -61,9 +61,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 -(NSString*) description {
 	return [NSString stringWithFormat:
-		  @"BBFeature {type:%@ parameters:%@}", [self class], _parameters];
-	
-	
+		  @"%@%@", [self class], [self parametersSnakeCaseDescription]];
+}
+
+-(NSString*) parametersSnakeCaseDescription {
+    NSMutableString* result = [NSMutableString stringWithCapacity:50];
+    
+    for (NSString* key in _parameters) {
+        [result appendFormat:@"_%@_%@", key, [_parameters objectForKey:key]]; 
+    }
+    
+    return result;
 }
 
 -(void) setParametersFromString:(NSString*) parametersDescription {

@@ -148,7 +148,10 @@ typedef int** LabelsSelection;
 						sequence:(BBSequence*) sequence 
 						  labels:(NSArray*) labels 
 					  stopAtSize:(unsigned int) seqSize{
-	
+	if(seqSize==0)
+        @throw [NSException exceptionWithName:@"ZeroLenSeqError" reason:@"Sequences of zero lenght are not supported" userInfo:nil];
+    
+    
 	int numLabels = [labels count];
 	double bestScore=-DBL_MAX;
 	int bestAncestor=-1;

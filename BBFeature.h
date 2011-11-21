@@ -45,6 +45,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -(NSString*) parametersAsString;
 
 
+-(NSString*) parametersSnakeCaseDescription;
+
 #pragma mark BBFeatures methods to be implemented
 -(BOOL) evalOnSequence:(BBSequence*) sequence forTime:(unsigned int) t;
 

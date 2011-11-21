@@ -70,6 +70,8 @@ NSInteger verticalWeightSort(id label1, id label2, void *context) {
 NodesInfo* 
 newNodesInfo(NSArray* labelSet,
 			 unsigned int T) {
+    if(T==0)
+        @throw [NSException exceptionWithName:@"ZeroLenSeqError" reason:@"Zero length sequences are not supported" userInfo:nil];
 	
 	// alloc-ing memory
 	unsigned int numLabels = [labelSet count];
