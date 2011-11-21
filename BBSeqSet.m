@@ -48,7 +48,7 @@ NSString* BBSeqSetDidChangeNotification=@"BBSeqSetDidChangeNotification";
 	return [_ss objectAtIndex:t];
 }
 
--(unsigned) indexOfSequenceIdenticalTo:(BBSequence*) sequence {
+-(NSUInteger) indexOfSequenceIdenticalTo:(BBSequence*) sequence {
 	return [_ss indexOfObjectIdenticalTo:sequence];
 }
 

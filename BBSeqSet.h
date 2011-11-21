@@ -36,7 +36,7 @@ extern NSString* BBSeqSetDidChangeNotification;
 -(id)init;
 -(void) dealloc;
 -(BBSequence*) sequenceNumber:(unsigned int) t;
--(unsigned) indexOfSequenceIdenticalTo:(BBSequence*) sequence;
+-(NSUInteger) indexOfSequenceIdenticalTo:(BBSequence*) sequence;
 
 -(NSEnumerator*) sequenceEnumerator;
 -(void) appendSequence:(BBSequence*) sequence;
