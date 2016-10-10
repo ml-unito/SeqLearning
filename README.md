@@ -12,4 +12,4 @@ needs to be installed in /Library/Frameworks and referenced from the requiring a
 Open the project from XCode and build it. Find the SeqLearning.framework package inside the Products folder in XCode,
 right click on it an select "Show in Finder", then copy the file in /Library/Frameworks.
 
-<a name="note1">Note:</a> This version has been tested on XCode 8.0.
+<a name="note1">*[1]*</a> This version has been tested on XCode 8.0.
