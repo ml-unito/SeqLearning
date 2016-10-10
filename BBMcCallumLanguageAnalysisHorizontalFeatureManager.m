@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @implementation BBMcCallumLanguageAnalysisHorizontalFeatureManager
 
--(NSMutableArray*) initFeatures {
+-(NSMutableArray*) arrayWithFeatures {
 	unsigned int lastCategory=0;
 	BBFeature* feature;
 	NSMutableArray* featureSet = [NSMutableArray arrayWithCapacity:1000];

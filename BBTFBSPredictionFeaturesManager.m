@@ -34,7 +34,7 @@
 
 @implementation BBTFBSPredictionFeaturesManager
 
--(NSMutableArray*) initFeaturesUsingDataSet:(BBSeqSet*) dataset; {	
+-(NSMutableArray*) arrayWithFeaturesUsingDataSet:(BBSeqSet*) dataset; {	
 	BBFeature* feature;
 	NSMutableArray* featureSet;
 	

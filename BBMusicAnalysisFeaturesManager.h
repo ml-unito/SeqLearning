@@ -29,6 +29,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 @interface BBMusicAnalysisFeaturesManager : BBFeaturesManager {
 }
 
--(NSMutableArray*) initFeaturesUsingLabelSet:(NSSet*) labelSet;
+-(NSMutableArray*) arrayWithFeaturesUsingLabelSet:(NSSet*) labelSet;
 
 @end

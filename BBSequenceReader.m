@@ -77,7 +77,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	[super dealloc];
 }
 
--(NSArray*) attributeReaders {
+-(NSMutableArray*) attributeReaders {
 	NSAssert( _attribute_descriptions!=nil,
 			  @"Cannot build readers without attribute descriptions" );
 	NSMutableArray* readers = [NSMutableArray arrayWithCapacity:[_attribute_descriptions count]];
@@ -123,8 +123,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			NSArray* fields = [line componentsSeparatedByString:BBFieldsDelimiterString];
 			if( [fields count] < [_readers count] ) {
 				NSString* errMsg = [NSString stringWithFormat:
-				@"Number of fields in input string ``%@'' smaller than the expected number of attributes:%d",
-					line, [_readers count]];
+                                    @"Number of fields in input string ``%@'' smaller than the expected number of attributes:%lu",
+                                    line, (unsigned long)[_readers count]];
 				@throw [NSException exceptionWithName:BBSequenceReadingException
 											   reason:errMsg 
 											 userInfo:nil];

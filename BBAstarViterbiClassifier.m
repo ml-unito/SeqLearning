@@ -152,9 +152,9 @@ NSString* enqueuedKeyForNode(BBAstarNode* node) {
 	   [weights count]!=[features count]) {
 		@throw [NSException exceptionWithName:BBGenericError
 									   reason:
-				[NSString stringWithFormat:@"features not set yet, or |features[%d]|!=|weights[%d]|",
-				 [weights count],
-				 [features count]]
+				[NSString stringWithFormat:@"features not set yet, or |features[%ld]|!=|weights[%ld]|",
+				 (unsigned long)[weights count],
+				 (unsigned long)[features count]]
 									 userInfo:nil];
 	}
 	
@@ -244,9 +244,9 @@ NSString* enqueuedKeyForNode(BBAstarNode* node) {
 				if( found_node!=nil ) {
 					if( [found_node accumulatedWeight] < [successor accumulatedWeight] ) {
 						NSAssert( [[found_node pathToParentNode] count] == [[successor pathToParentNode] count],
-								 ([NSString stringWithFormat: @"found path size (%d) != successor path size (%d)\nfound:%@\nsuccessor:%@",
-								  [[found_node pathToParentNode] count],
-								  [[successor pathToParentNode] count],
+                                 ([NSString stringWithFormat: @"found path size (%lu) != successor path size (%lu)\nfound:%@\nsuccessor:%@",
+                                   (unsigned long)[[found_node pathToParentNode] count],
+                                   (unsigned long)[[successor pathToParentNode] count],
 								  found_node, 
 								  successor]));
 					

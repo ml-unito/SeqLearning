@@ -33,7 +33,7 @@
 
 @implementation BBMusicAnalysisWithAbsFeaturesManager
 
--(NSMutableArray*) initFeaturesUsingLabelSet:(NSSet*) labelSet {
+-(NSMutableArray*) arrayWithFeaturesUsingLabelSet:(NSSet*) labelSet {
 	BBFeature* feature;
 	NSMutableArray* featureSet;
 	unsigned int lastCategory=0;

@@ -137,7 +137,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			else 
 				openStatus = 'C';
 			
-			[result appendFormat:@"%c(%4s) ", openStatus, [[info objectForKey:@"label"] cString]];
+			[result appendFormat:@"%c(%4s) ", openStatus, [[info objectForKey:@"label"] cStringUsingEncoding:NSUTF8StringEncoding]];
 		}
 		
 		[result appendFormat:@"\n"];

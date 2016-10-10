@@ -196,7 +196,7 @@ int BBMusicAnalysisBassPitchAtTime(BBSequence* sequence, unsigned int t) {
 
 
 unsigned int BBMusicAnalysisPitchClassDistance(unsigned int x, unsigned int y) {
-	int diff = abs(x-y);
+    int diff = x > y ? x - y  : y - x;
 	return min( 12 - diff, diff );
 }
 

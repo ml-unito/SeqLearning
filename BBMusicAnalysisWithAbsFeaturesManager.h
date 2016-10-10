@@ -14,6 +14,6 @@
 
 }
 
--(NSMutableArray*) initFeaturesUsingLabelSet:(NSSet*) labelSet;
+-(NSMutableArray*) arrayWithFeaturesUsingLabelSet:(NSSet*) labelSet;
 
 @end

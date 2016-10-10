@@ -45,7 +45,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @implementation BBMusicAnalysisFeaturesManager
 
--(NSMutableArray*) initFeaturesUsingLabelSet:(NSSet*) labelSet {
+-(NSMutableArray*) arrayWithFeaturesUsingLabelSet:(NSSet*) labelSet {    
 	BBFeature* feature;
 	NSMutableArray* featureSet;
 	unsigned int lastCategory=0;

@@ -114,8 +114,9 @@ BOOL BBMusicAnalysisClosePitchIsPresentAV(BBSequence* sequence, unsigned int t, 
 	int av_p; // iterates over notes in the current event
 	for(av_p=AV_START_INDEX; av_p<=AV_END_INDEX; av_p+=2) {
 		int curr_av = [[sequence valueOfAttributeAtTime:t andPosition:av_p] intValue];
+        int pc = (int) pitch_class;
 		if(curr_av==0) break;
-		unsigned int distance = abs((curr_av % 12) - pitch_class +12)%12;
+		unsigned int distance = abs((curr_av % 12) - pc +12)%12;
 		if(distance == 1 || distance == 2) return TRUE;
 	}
 	

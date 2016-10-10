@@ -70,7 +70,7 @@ skip_nil_features_is_enabled(void) {
 	
 	int l;
 	for( l=0; l<[labels count]; ++l) {
-		printf("%8s ", [[labels objectAtIndex:l] cString]);
+		printf("%8s ", [[labels objectAtIndex:l] cStringUsingEncoding:NSUTF8StringEncoding]);
 		for(t=0; t<T; ++t) {
 			printf("%8e ", scores[l][t]);
 		}
@@ -89,7 +89,7 @@ skip_nil_features_is_enabled(void) {
 	
 	int l;
 	for( l=0; l<[labels count]; ++l) {
-		printf("%8s ", [[labels objectAtIndex:l] cString]);
+		printf("%8s ", [[labels objectAtIndex:l] cStringUsingEncoding:NSUTF8StringEncoding]);
 		for(t=0; t<T; ++t) {
 			printf("%8d ", ancestors[l][t]);
 		}

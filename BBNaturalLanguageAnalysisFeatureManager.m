@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @implementation BBNaturalLanguageAnalysisFeatureManager
 
--(NSMutableArray*) initFeaturesUsingLabelSet:(NSSet*) labelSet {	
+-(NSMutableArray*) arrayWithFeaturesUsingLabelSet:(NSSet*) labelSet {	
 	unsigned int lastCategory=0;
 	BBFeature* feature;
 	NSMutableArray* featureSet = [NSMutableArray arrayWithCapacity:100];

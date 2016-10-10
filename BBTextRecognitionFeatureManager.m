@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @implementation BBTextRecognitionFeatureManager
 
--(NSMutableArray*) initFeaturesUsingLabelSet:(NSSet*) labelSet {	
+-(NSMutableArray*) arrayWithFeaturesUsingLabelSet:(NSSet*) labelSet {	
 	BBFeature* feature;
 	NSMutableArray* featureSet;
 	

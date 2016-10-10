@@ -359,9 +359,9 @@ void dumpNodesInfoStatus(NodesInfo* nodesInfo, int t_end) {
 	NSArray* features = [self features];
 	if( features==nil || [weights count]!=[features count]) {
 		@throw [NSException exceptionWithName:BBGenericError
-									   reason:	[NSString stringWithFormat:@"features not set yet, or |features[%d]|!=|weights[%d]|",
-												 [weights count],
-												 [features count]]
+									   reason:	[NSString stringWithFormat:@"features not set yet, or |features[%ld]|!=|weights[%ld]|",
+												 (unsigned long)[weights count],
+												 (unsigned long)[features count]]
 									 userInfo:nil];
 	}
 	
