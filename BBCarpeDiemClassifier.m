@@ -35,7 +35,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 NSString* BBViterbiClassifierWillAnalyzeEventAtTimeNotification=@"BBViterbiClassifierWillAnalyzeEventAtTimeNotification";
 
 
-#pragma MACROS
 #define OPEN_NODE_AT_TIME(t,n) { nodesInfo->open[(t)][(n)]=1; ++nodesInfo->numNodesOpenedAtTime[(nodesInfo->curTime)]; }
 
 

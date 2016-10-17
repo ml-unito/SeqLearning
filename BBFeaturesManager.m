@@ -50,7 +50,7 @@ static BBFeaturesManager* _defaultManager = nil;
 -(id) initWithDataSet:(BBSeqSet*) dataset {
 	if( (self=[super init]) ) {
 		[self setFeaturesToMutexCategoryMapper:[NSMutableDictionary dictionaryWithCapacity:100]];
-		[self setFeatures:[self initFeaturesUsingDataSet:dataset]];
+		[self setFeatures:[self arrayWithFeaturesUsingDataSet:dataset]];
 		[self setOptions: [NSMutableDictionary dictionary]];
 	}
 	
@@ -119,14 +119,14 @@ static BBFeaturesManager* _defaultManager = nil;
     return self;
 }
 
--(NSMutableArray*) initFeaturesUsingLabelSet:(NSSet*) labelSet {
+-(NSMutableArray*) arrayWithFeaturesUsingLabelSet:(NSSet*) labelSet {
 	NSAssert(FALSE, @"This method should be implemented in subclasses...");
 	return nil;
 }
 
 
--(NSMutableArray*) initFeaturesUsingDataSet:(BBSeqSet*) dataset {
-	return [self initFeaturesUsingLabelSet:[dataset labels]];
+-(NSMutableArray*) arrayWithFeaturesUsingDataSet:(BBSeqSet*) dataset {
+	return [self arrayWithFeaturesUsingLabelSet:[dataset labels]];
 }
 
 @end

@@ -35,9 +35,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 -(NSString*) description;
 
--(id)initWithCoder:(NSCoder*) coder;
-- (void)encodeWithCoder:(NSCoder *)encoder;
-
 -(void) setParameters:(NSDictionary*) parameters;
 -(NSDictionary*) parameters;
 

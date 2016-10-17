@@ -1160,6 +1160,7 @@
 					"-Wmost",
 					"-Wno-four-char-constants",
 					"-Wno-unknown-pragmas",
+					"-Wall",
 				);
 			};
 			name = Debug;
@@ -1200,6 +1201,7 @@
 					"-Wmost",
 					"-Wno-four-char-constants",
 					"-Wno-unknown-pragmas",
+					"-Wall",
 				);
 				ZERO_LINK = NO;
 			};
@@ -1235,6 +1237,7 @@
 					"-Wmost",
 					"-Wno-four-char-constants",
 					"-Wno-unknown-pragmas",
+					"-Wall",
 				);
 			};
 			name = Default;

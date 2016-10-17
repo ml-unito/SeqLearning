@@ -51,13 +51,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -(void) setFeatures:(NSMutableArray*) features;
 
 /// this is the ONE method people really needs to implement
--(NSMutableArray*) initFeaturesUsingLabelSet:(NSSet*) labelSet; 
+-(NSMutableArray*) arrayWithFeaturesUsingLabelSet:(NSSet*) labelSet;
 
 /** this method simply calls initFeaturesUsingLabelSet using the appropriate
  * label set. It may be overridden in case more information (w.r.t. labels)
  * is needed in building the features.
  */
--(NSMutableArray*) initFeaturesUsingDataSet:(BBSeqSet*) dataset;
+-(NSMutableArray*) arrayWithFeaturesUsingDataSet:(BBSeqSet*) dataset;
 
 
 #pragma mark CODYING PROTOCOL

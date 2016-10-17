@@ -34,7 +34,7 @@ NSString* BBDimMode=@"d";
 		case NEW_FORMAT_LABEL_POS:                                                                \
 			return fun2;                                                                          \
 		default:                                                                                  \
-			[NSException raise:BBGenericError format:@"Wrong input format detected while processing BBNumberOfChordNotesAssertedInEvent"]; \
+			[NSException raise:BBGenericError format:@"Wrong input format detected while processing BBNumberOfChordNotesAssertedInEvent; label at position: %d", label_pos]; \
 	} \
     return -1;
 
