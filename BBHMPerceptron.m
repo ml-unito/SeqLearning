@@ -55,7 +55,7 @@ FILE* files[255];
 
 -(id) init {
 	if( (self=[super init]) ) {
-		[_options setObject: [NSNumber numberWithInt:20] 
+		[_options setObject: [NSNumber numberWithInt:5]
 					 forKey:BBHMPerceptronNumberOfIterationsOption];
 		[_options setObject: @"BBCarpeDiemClassifier"
 					 forKey:BBHMPerceptronViterbiClassifierClassOption];
